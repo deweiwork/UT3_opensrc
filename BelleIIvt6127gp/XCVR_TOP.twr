@@ -1,0 +1,1985 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 2
+-n 3 -fastpaths -xml XCVR_TOP.twx XCVR_TOP.ncd -o XCVR_TOP.twr XCVR_TOP.pcf
+-ucf XCVR_TOP.ucf
+
+Design file:              XCVR_TOP.ncd
+Physical constraint file: XCVR_TOP.pcf
+Device,package,speed:     xc6vhx380t,ff1923,C,-2 (PRODUCTION 1.17 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_U_TO_J = MAXDELAY FROM TIMEGRP "U_CLK" TO TIMEGRP "J_CLK" 
+15 ns;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 18 paths analyzed, 18 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   2.979ns.
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[8].I_NE0.U_TARGET (SLICE_X51Y131.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (setup paths):    12.021ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[8].I_NE0.U_TARGET (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      2.944ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/iUPDATE_OUT rising
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD to Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[8].I_NE0.U_TARGET
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X70Y167.DQ     Tcko                  0.283   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iDATA_CMD
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD
+    SLICE_X66Y164.D4     net (fanout=3)        0.627   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iDATA_CMD
+    SLICE_X66Y164.D      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/iTARGET_CE
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/U_TARGET_CE
+    SLICE_X51Y131.CE     net (fanout=3)        1.732   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/iTARGET_CE
+    SLICE_X51Y131.CLK    Tceck                 0.241   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/iTARGET<11>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[8].I_NE0.U_TARGET
+    -------------------------------------------------  ---------------------------
+    Total                                      2.944ns (0.585ns logic, 2.359ns route)
+                                                       (19.9% logic, 80.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[9].I_NE0.U_TARGET (SLICE_X51Y131.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (setup paths):    12.021ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[9].I_NE0.U_TARGET (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      2.944ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/iUPDATE_OUT rising
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD to Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[9].I_NE0.U_TARGET
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X70Y167.DQ     Tcko                  0.283   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iDATA_CMD
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD
+    SLICE_X66Y164.D4     net (fanout=3)        0.627   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iDATA_CMD
+    SLICE_X66Y164.D      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/iTARGET_CE
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/U_TARGET_CE
+    SLICE_X51Y131.CE     net (fanout=3)        1.732   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/iTARGET_CE
+    SLICE_X51Y131.CLK    Tceck                 0.241   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/iTARGET<11>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[9].I_NE0.U_TARGET
+    -------------------------------------------------  ---------------------------
+    Total                                      2.944ns (0.585ns logic, 2.359ns route)
+                                                       (19.9% logic, 80.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[10].I_NE0.U_TARGET (SLICE_X51Y131.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (setup paths):    12.021ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[10].I_NE0.U_TARGET (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      2.944ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/iUPDATE_OUT rising
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD to Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[10].I_NE0.U_TARGET
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X70Y167.DQ     Tcko                  0.283   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iDATA_CMD
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD
+    SLICE_X66Y164.D4     net (fanout=3)        0.627   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iDATA_CMD
+    SLICE_X66Y164.D      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/iTARGET_CE
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/U_TARGET_CE
+    SLICE_X51Y131.CE     net (fanout=3)        1.732   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/iTARGET_CE
+    SLICE_X51Y131.CLK    Tceck                 0.241   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/iTARGET<11>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[10].I_NE0.U_TARGET
+    -------------------------------------------------  ---------------------------
+    Total                                      2.944ns (0.585ns logic, 2.359ns route)
+                                                       (19.9% logic, 80.1% route)
+
+--------------------------------------------------------------------------------
+Hold Paths: TS_U_TO_J = MAXDELAY FROM TIMEGRP "U_CLK" TO TIMEGRP "J_CLK" 15 ns;
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/G_SYNC_WORD[4].I_NE0.U_FDR (SLICE_X63Y154.SR), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.854ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/G_SYNC_WORD[4].I_NE0.U_FDR (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.889ns (Levels of Logic = 1)
+  Positive Clock Path Skew: 0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/iUPDATE_OUT rising
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Data Path at Fast Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD to Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/G_SYNC_WORD[4].I_NE0.U_FDR
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X70Y167.DQ     Tcko                  0.098   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iDATA_CMD
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD
+    SLICE_X66Y165.D3     net (fanout=3)        0.377   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iDATA_CMD
+    SLICE_X66Y165.D      Tilo                  0.034   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/iDATA_CMD_n
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/U_iDATA_CMD_n
+    SLICE_X63Y154.SR     net (fanout=2)        0.315   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/iDATA_CMD_n
+    SLICE_X63Y154.CLK    Tcksr       (-Th)    -0.065   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/iSYNC_WORD<3>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/G_SYNC_WORD[4].I_NE0.U_FDR
+    -------------------------------------------------  ---------------------------
+    Total                                      0.889ns (0.197ns logic, 0.692ns route)
+                                                       (22.2% logic, 77.8% route)
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/G_SYNC_WORD[5].I_NE0.U_FDR (SLICE_X63Y154.SR), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.854ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/G_SYNC_WORD[5].I_NE0.U_FDR (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.889ns (Levels of Logic = 1)
+  Positive Clock Path Skew: 0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/iUPDATE_OUT rising
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Data Path at Fast Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD to Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/G_SYNC_WORD[5].I_NE0.U_FDR
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X70Y167.DQ     Tcko                  0.098   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iDATA_CMD
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD
+    SLICE_X66Y165.D3     net (fanout=3)        0.377   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iDATA_CMD
+    SLICE_X66Y165.D      Tilo                  0.034   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/iDATA_CMD_n
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/U_iDATA_CMD_n
+    SLICE_X63Y154.SR     net (fanout=2)        0.315   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/iDATA_CMD_n
+    SLICE_X63Y154.CLK    Tcksr       (-Th)    -0.065   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/iSYNC_WORD<3>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/G_SYNC_WORD[5].I_NE0.U_FDR
+    -------------------------------------------------  ---------------------------
+    Total                                      0.889ns (0.197ns logic, 0.692ns route)
+                                                       (22.2% logic, 77.8% route)
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/G_SYNC_WORD[6].I_EQ0.U_FDR (SLICE_X63Y154.SR), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.854ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/G_SYNC_WORD[6].I_EQ0.U_FDR (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.889ns (Levels of Logic = 1)
+  Positive Clock Path Skew: 0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/iUPDATE_OUT rising
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Data Path at Fast Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD to Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/G_SYNC_WORD[6].I_EQ0.U_FDR
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X70Y167.DQ     Tcko                  0.098   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iDATA_CMD
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD
+    SLICE_X66Y165.D3     net (fanout=3)        0.377   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iDATA_CMD
+    SLICE_X66Y165.D      Tilo                  0.034   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/iDATA_CMD_n
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/U_iDATA_CMD_n
+    SLICE_X63Y154.SR     net (fanout=2)        0.315   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/iDATA_CMD_n
+    SLICE_X63Y154.CLK    Tcksr       (-Th)    -0.065   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/iSYNC_WORD<3>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/G_SYNC_WORD[6].I_EQ0.U_FDR
+    -------------------------------------------------  ---------------------------
+    Total                                      0.889ns (0.197ns logic, 0.692ns route)
+                                                       (22.2% logic, 77.8% route)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_U_TO_U = MAXDELAY FROM TIMEGRP "U_CLK" TO TIMEGRP "U_CLK" 
+15 ns;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   0.636ns.
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD (SLICE_X70Y167.D4), 1 path
+--------------------------------------------------------------------------------
+Slack (setup paths):    14.364ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      0.601ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/iUPDATE_OUT rising
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/iUPDATE_OUT rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD to Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X70Y167.DQ     Tcko                  0.283   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iDATA_CMD
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD
+    SLICE_X70Y167.D4     net (fanout=3)        0.261   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iDATA_CMD
+    SLICE_X70Y167.CLK    Tas                   0.057   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iDATA_CMD
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD_n
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD
+    -------------------------------------------------  ---------------------------
+    Total                                      0.601ns (0.340ns logic, 0.261ns route)
+                                                       (56.6% logic, 43.4% route)
+
+--------------------------------------------------------------------------------
+Hold Paths: TS_U_TO_U = MAXDELAY FROM TIMEGRP "U_CLK" TO TIMEGRP "U_CLK" 15 ns;
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD (SLICE_X70Y167.D4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.144ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.144ns (Levels of Logic = 1)
+  Positive Clock Path Skew: 0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/iUPDATE_OUT rising
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/iUPDATE_OUT rising
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD to Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X70Y167.DQ     Tcko                  0.098   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iDATA_CMD
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD
+    SLICE_X70Y167.D4     net (fanout=3)        0.103   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iDATA_CMD
+    SLICE_X70Y167.CLK    Tah         (-Th)     0.057   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iDATA_CMD
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD_n
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_iDATA_CMD
+    -------------------------------------------------  ---------------------------
+    Total                                      0.144ns (0.041ns logic, 0.103ns route)
+                                                       (28.5% logic, 71.5% route)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_J_TO_D_path" TIG;
+
+ 4702 paths analyzed, 540 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[4].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1 (SLICE_X36Y86.SR), 11 paths
+--------------------------------------------------------------------------------
+Delay (setup path):     5.056ns (data path - clock path skew + uncertainty)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/U_SYNC (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[4].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1 (FF)
+  Data Path Delay:      5.021ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/rx_clk_buf_out<0> rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/U_SYNC to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[4].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X62Y154.AQ     Tcko                  0.283   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iSYNC
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/U_SYNC
+    SLICE_X62Y154.A5     net (fanout=1)        0.171   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iSYNC
+    SLICE_X62Y154.A      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iSYNC
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/U_DATA_VALID
+    SLICE_X57Y115.B2     net (fanout=18)       2.309   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/iDATA_VALID
+    SLICE_X57Y115.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/STATE_dstat<1>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[0].U_HCE
+    SLICE_X36Y86.SR      net (fanout=7)        1.839   Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_1<20>
+    SLICE_X36Y86.CLK     Trck                  0.297   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/gand_dly1<7>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[4].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1
+    -------------------------------------------------  ---------------------------
+    Total                                      5.021ns (0.702ns logic, 4.319ns route)
+                                                       (14.0% logic, 86.0% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     4.547ns (data path - clock path skew + uncertainty)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[15].I_EQ0.U_TARGET (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[4].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1 (FF)
+  Data Path Delay:      4.512ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/rx_clk_buf_out<0> rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[15].I_EQ0.U_TARGET to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[4].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y137.DQ     Tcko                  0.322   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID<3>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[15].I_EQ0.U_TARGET
+    SLICE_X51Y136.B1     net (fanout=4)        0.623   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID<3>
+    SLICE_X51Y136.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID_SEL<1>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[1].U_LUT
+    SLICE_X57Y115.B4     net (fanout=9)        1.309   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID_SEL<1>
+    SLICE_X57Y115.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/STATE_dstat<1>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[0].U_HCE
+    SLICE_X36Y86.SR      net (fanout=7)        1.839   Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_1<20>
+    SLICE_X36Y86.CLK     Trck                  0.297   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/gand_dly1<7>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[4].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.512ns (0.741ns logic, 3.771ns route)
+                                                       (16.4% logic, 83.6% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     4.491ns (data path - clock path skew + uncertainty)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[13].I_NE0.U_TARGET (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[4].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1 (FF)
+  Data Path Delay:      4.456ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/rx_clk_buf_out<0> rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[13].I_NE0.U_TARGET to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[4].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y137.BQ     Tcko                  0.322   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID<3>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[13].I_NE0.U_TARGET
+    SLICE_X51Y136.B2     net (fanout=4)        0.567   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID<1>
+    SLICE_X51Y136.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID_SEL<1>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[1].U_LUT
+    SLICE_X57Y115.B4     net (fanout=9)        1.309   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID_SEL<1>
+    SLICE_X57Y115.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/STATE_dstat<1>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[0].U_HCE
+    SLICE_X36Y86.SR      net (fanout=7)        1.839   Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_1<20>
+    SLICE_X36Y86.CLK     Trck                  0.297   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/gand_dly1<7>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[4].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.456ns (0.741ns logic, 3.715ns route)
+                                                       (16.6% logic, 83.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[5].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1 (SLICE_X36Y86.SR), 11 paths
+--------------------------------------------------------------------------------
+Delay (setup path):     5.056ns (data path - clock path skew + uncertainty)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/U_SYNC (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[5].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1 (FF)
+  Data Path Delay:      5.021ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/rx_clk_buf_out<0> rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/U_SYNC to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[5].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X62Y154.AQ     Tcko                  0.283   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iSYNC
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/U_SYNC
+    SLICE_X62Y154.A5     net (fanout=1)        0.171   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iSYNC
+    SLICE_X62Y154.A      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iSYNC
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/U_DATA_VALID
+    SLICE_X57Y115.B2     net (fanout=18)       2.309   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/iDATA_VALID
+    SLICE_X57Y115.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/STATE_dstat<1>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[0].U_HCE
+    SLICE_X36Y86.SR      net (fanout=7)        1.839   Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_1<20>
+    SLICE_X36Y86.CLK     Trck                  0.297   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/gand_dly1<7>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[5].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1
+    -------------------------------------------------  ---------------------------
+    Total                                      5.021ns (0.702ns logic, 4.319ns route)
+                                                       (14.0% logic, 86.0% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     4.547ns (data path - clock path skew + uncertainty)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[15].I_EQ0.U_TARGET (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[5].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1 (FF)
+  Data Path Delay:      4.512ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/rx_clk_buf_out<0> rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[15].I_EQ0.U_TARGET to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[5].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y137.DQ     Tcko                  0.322   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID<3>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[15].I_EQ0.U_TARGET
+    SLICE_X51Y136.B1     net (fanout=4)        0.623   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID<3>
+    SLICE_X51Y136.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID_SEL<1>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[1].U_LUT
+    SLICE_X57Y115.B4     net (fanout=9)        1.309   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID_SEL<1>
+    SLICE_X57Y115.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/STATE_dstat<1>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[0].U_HCE
+    SLICE_X36Y86.SR      net (fanout=7)        1.839   Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_1<20>
+    SLICE_X36Y86.CLK     Trck                  0.297   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/gand_dly1<7>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[5].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.512ns (0.741ns logic, 3.771ns route)
+                                                       (16.4% logic, 83.6% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     4.491ns (data path - clock path skew + uncertainty)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[13].I_NE0.U_TARGET (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[5].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1 (FF)
+  Data Path Delay:      4.456ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/rx_clk_buf_out<0> rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[13].I_NE0.U_TARGET to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[5].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y137.BQ     Tcko                  0.322   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID<3>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[13].I_NE0.U_TARGET
+    SLICE_X51Y136.B2     net (fanout=4)        0.567   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID<1>
+    SLICE_X51Y136.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID_SEL<1>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[1].U_LUT
+    SLICE_X57Y115.B4     net (fanout=9)        1.309   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID_SEL<1>
+    SLICE_X57Y115.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/STATE_dstat<1>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[0].U_HCE
+    SLICE_X36Y86.SR      net (fanout=7)        1.839   Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_1<20>
+    SLICE_X36Y86.CLK     Trck                  0.297   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/gand_dly1<7>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[5].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.456ns (0.741ns logic, 3.715ns route)
+                                                       (16.6% logic, 83.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[6].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1 (SLICE_X36Y86.SR), 11 paths
+--------------------------------------------------------------------------------
+Delay (setup path):     5.056ns (data path - clock path skew + uncertainty)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/U_SYNC (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[6].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1 (FF)
+  Data Path Delay:      5.021ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/rx_clk_buf_out<0> rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/U_SYNC to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[6].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X62Y154.AQ     Tcko                  0.283   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iSYNC
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/U_SYNC
+    SLICE_X62Y154.A5     net (fanout=1)        0.171   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iSYNC
+    SLICE_X62Y154.A      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iSYNC
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/U_DATA_VALID
+    SLICE_X57Y115.B2     net (fanout=18)       2.309   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/iDATA_VALID
+    SLICE_X57Y115.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/STATE_dstat<1>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[0].U_HCE
+    SLICE_X36Y86.SR      net (fanout=7)        1.839   Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_1<20>
+    SLICE_X36Y86.CLK     Trck                  0.297   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/gand_dly1<7>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[6].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1
+    -------------------------------------------------  ---------------------------
+    Total                                      5.021ns (0.702ns logic, 4.319ns route)
+                                                       (14.0% logic, 86.0% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     4.547ns (data path - clock path skew + uncertainty)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[15].I_EQ0.U_TARGET (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[6].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1 (FF)
+  Data Path Delay:      4.512ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/rx_clk_buf_out<0> rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[15].I_EQ0.U_TARGET to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[6].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y137.DQ     Tcko                  0.322   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID<3>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[15].I_EQ0.U_TARGET
+    SLICE_X51Y136.B1     net (fanout=4)        0.623   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID<3>
+    SLICE_X51Y136.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID_SEL<1>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[1].U_LUT
+    SLICE_X57Y115.B4     net (fanout=9)        1.309   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID_SEL<1>
+    SLICE_X57Y115.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/STATE_dstat<1>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[0].U_HCE
+    SLICE_X36Y86.SR      net (fanout=7)        1.839   Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_1<20>
+    SLICE_X36Y86.CLK     Trck                  0.297   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/gand_dly1<7>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[6].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.512ns (0.741ns logic, 3.771ns route)
+                                                       (16.4% logic, 83.6% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     4.491ns (data path - clock path skew + uncertainty)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[13].I_NE0.U_TARGET (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[6].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1 (FF)
+  Data Path Delay:      4.456ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/rx_clk_buf_out<0> rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[13].I_NE0.U_TARGET to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[6].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y137.BQ     Tcko                  0.322   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID<3>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[13].I_NE0.U_TARGET
+    SLICE_X51Y136.B2     net (fanout=4)        0.567   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID<1>
+    SLICE_X51Y136.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID_SEL<1>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[1].U_LUT
+    SLICE_X57Y115.B4     net (fanout=9)        1.309   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID_SEL<1>
+    SLICE_X57Y115.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/STATE_dstat<1>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[0].U_HCE
+    SLICE_X36Y86.SR      net (fanout=7)        1.839   Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_1<20>
+    SLICE_X36Y86.CLK     Trck                  0.297   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/gand_dly1<7>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/G_GAND_DLY1[6].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.456ns (0.741ns logic, 3.715ns route)
+                                                       (16.6% logic, 83.4% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: PATH "TS_J_TO_D_path" TIG;
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_DOUT0 (SLICE_X54Y122.AX), 1 path
+--------------------------------------------------------------------------------
+Delay (hold path):      0.071ns (datapath - clock path skew - uncertainty)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_TFDRE (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_DOUT0 (FF)
+  Data Path Delay:      0.106ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/rx_clk_buf_out<0> rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Data Path at Fast Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_TFDRE to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_DOUT0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y122.AQ     Tcko                  0.098   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/din_latched
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_TFDRE
+    SLICE_X54Y122.AX     net (fanout=1)        0.097   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/din_latched
+    SLICE_X54Y122.CLK    Tckdi       (-Th)     0.089   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/iDIN<1>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_DOUT0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.106ns (0.009ns logic, 0.097ns route)
+                                                       (8.5% logic, 91.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_DOUT0 (SLICE_X53Y138.AX), 1 path
+--------------------------------------------------------------------------------
+Delay (hold path):      0.103ns (datapath - clock path skew - uncertainty)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_TFDRE (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_DOUT0 (FF)
+  Data Path Delay:      0.138ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/tx_clk_buf_out<0> rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Data Path at Fast Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_TFDRE to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_DOUT0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y139.AQ     Tcko                  0.115   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/din_latched
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_TFDRE
+    SLICE_X53Y138.AX     net (fanout=1)        0.099   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/din_latched
+    SLICE_X53Y138.CLK    Tckdi       (-Th)     0.076   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/iDIN<1>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_DOUT0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.138ns (0.039ns logic, 0.099ns route)
+                                                       (28.3% logic, 71.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[4].U_iCAP_ADDR (SLICE_X56Y112.A5), 1 path
+--------------------------------------------------------------------------------
+Delay (hold path):      0.115ns (datapath - clock path skew - uncertainty)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[4].U_SEL (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[4].U_iCAP_ADDR (FF)
+  Data Path Delay:      0.150ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/rx_clk_buf_out<0> rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Data Path at Fast Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[4].U_SEL to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[4].U_iCAP_ADDR
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y112.AQ     Tcko                  0.098   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/cfg_data_vec<8>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[4].U_SEL
+    SLICE_X56Y112.A5     net (fanout=2)        0.128   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/cfg_data_vec<5>
+    SLICE_X56Y112.CLK    Tah         (-Th)     0.076   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/iCAP_ADDR<7>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[4].U_CAP_ADDR_MUX
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[4].U_iCAP_ADDR
+    -------------------------------------------------  ---------------------------
+    Total                                      0.150ns (0.022ns logic, 0.128ns route)
+                                                       (14.7% logic, 85.3% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_D_TO_J_path" TIG;
+
+ 710 paths analyzed, 672 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_TDO (SLICE_X50Y140.D3), 20 paths
+--------------------------------------------------------------------------------
+Delay (setup path):     2.961ns (data path - clock path skew + uncertainty)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/G_NS[2].U_NSQ (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_TDO (FF)
+  Data Path Delay:      2.926ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/tx_clk_buf_out<0> rising
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/G_NS[2].U_NSQ to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X46Y145.CQ     Tcko                  0.322   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/NS_dstat<3>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/G_NS[2].U_NSQ
+    SLICE_X46Y144.D2     net (fanout=1)        0.655   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/NS_dstat<2>
+    SLICE_X46Y144.CMUX   Topdc                 0.309   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/FULL_dstat
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_DMUX4/U_CS_MUX/I3.U_MUX8/Mmux_O_4
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_DMUX4/U_CS_MUX/I3.U_MUX8/Mmux_O_2_f7
+    SLICE_X46Y143.C3     net (fanout=1)        0.412   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/DSTAT<4>
+    SLICE_X46Y143.C      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O113
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O115
+    SLICE_X50Y140.C2     net (fanout=1)        0.771   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O114
+    SLICE_X50Y140.C      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O116
+    SLICE_X50Y140.D3     net (fanout=1)        0.316   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O115
+    SLICE_X50Y140.CLK    Tas                   0.019   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O127
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    -------------------------------------------------  ---------------------------
+    Total                                      2.926ns (0.772ns logic, 2.154ns route)
+                                                       (26.4% logic, 73.6% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     2.849ns (data path - clock path skew + uncertainty)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/G_NS[1].U_NSQ (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_TDO (FF)
+  Data Path Delay:      2.814ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/tx_clk_buf_out<0> rising
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/G_NS[1].U_NSQ to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X46Y145.BQ     Tcko                  0.322   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/NS_dstat<3>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/G_NS[1].U_NSQ
+    SLICE_X46Y144.D1     net (fanout=1)        0.543   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/NS_dstat<1>
+    SLICE_X46Y144.CMUX   Topdc                 0.309   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/FULL_dstat
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_DMUX4/U_CS_MUX/I3.U_MUX8/Mmux_O_4
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_DMUX4/U_CS_MUX/I3.U_MUX8/Mmux_O_2_f7
+    SLICE_X46Y143.C3     net (fanout=1)        0.412   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/DSTAT<4>
+    SLICE_X46Y143.C      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O113
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O115
+    SLICE_X50Y140.C2     net (fanout=1)        0.771   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O114
+    SLICE_X50Y140.C      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O116
+    SLICE_X50Y140.D3     net (fanout=1)        0.316   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O115
+    SLICE_X50Y140.CLK    Tas                   0.019   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O127
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    -------------------------------------------------  ---------------------------
+    Total                                      2.814ns (0.772ns logic, 2.042ns route)
+                                                       (27.4% logic, 72.6% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     2.814ns (data path - clock path skew + uncertainty)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/G_NS[4].U_NSQ (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_TDO (FF)
+  Data Path Delay:      2.779ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/tx_clk_buf_out<0> rising
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/G_NS[4].U_NSQ to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X47Y145.AQ     Tcko                  0.283   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/NS_dstat<7>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/G_NS[4].U_NSQ
+    SLICE_X46Y144.C1     net (fanout=1)        0.544   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/NS_dstat<4>
+    SLICE_X46Y144.CMUX   Tilo                  0.312   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/FULL_dstat
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_DMUX4/U_CS_MUX/I3.U_MUX8/Mmux_O_3
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_DMUX4/U_CS_MUX/I3.U_MUX8/Mmux_O_2_f7
+    SLICE_X46Y143.C3     net (fanout=1)        0.412   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/DSTAT<4>
+    SLICE_X46Y143.C      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O113
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O115
+    SLICE_X50Y140.C2     net (fanout=1)        0.771   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O114
+    SLICE_X50Y140.C      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O116
+    SLICE_X50Y140.D3     net (fanout=1)        0.316   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O115
+    SLICE_X50Y140.CLK    Tas                   0.019   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O127
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    -------------------------------------------------  ---------------------------
+    Total                                      2.779ns (0.736ns logic, 2.043ns route)
+                                                       (26.5% logic, 73.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_TDO (SLICE_X59Y115.C2), 20 paths
+--------------------------------------------------------------------------------
+Delay (setup path):     2.946ns (data path - clock path skew + uncertainty)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/G_NS[0].U_NSQ (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_TDO (FF)
+  Data Path Delay:      2.911ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/rx_clk_buf_out<0> rising
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/G_NS[0].U_NSQ to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X61Y113.AQ     Tcko                  0.283   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/NS_dstat<3>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/G_NS[0].U_NSQ
+    SLICE_X58Y114.D1     net (fanout=1)        0.777   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/NS_dstat<0>
+    SLICE_X58Y114.CMUX   Topdc                 0.309   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/WCNT_LCMP_Q
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DMUX4/U_CS_MUX/I3.U_MUX8/Mmux_O_4
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DMUX4/U_CS_MUX/I3.U_MUX8/Mmux_O_2_f7
+    SLICE_X59Y114.C1     net (fanout=1)        0.428   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/DSTAT<4>
+    SLICE_X59Y114.C      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/NS_dstat<7>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O115
+    SLICE_X59Y115.B3     net (fanout=1)        0.399   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O114
+    SLICE_X59Y115.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O116
+    SLICE_X59Y115.C2     net (fanout=1)        0.533   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O115
+    SLICE_X59Y115.CLK    Tas                   0.060   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O127
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    -------------------------------------------------  ---------------------------
+    Total                                      2.911ns (0.774ns logic, 2.137ns route)
+                                                       (26.6% logic, 73.4% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     2.918ns (data path - clock path skew + uncertainty)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/G_NS[6].U_NSQ (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_TDO (FF)
+  Data Path Delay:      2.883ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/rx_clk_buf_out<0> rising
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/G_NS[6].U_NSQ to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X59Y114.CQ     Tcko                  0.283   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/NS_dstat<7>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/G_NS[6].U_NSQ
+    SLICE_X58Y114.C1     net (fanout=1)        0.746   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/NS_dstat<6>
+    SLICE_X58Y114.CMUX   Tilo                  0.312   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/WCNT_LCMP_Q
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DMUX4/U_CS_MUX/I3.U_MUX8/Mmux_O_3
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DMUX4/U_CS_MUX/I3.U_MUX8/Mmux_O_2_f7
+    SLICE_X59Y114.C1     net (fanout=1)        0.428   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/DSTAT<4>
+    SLICE_X59Y114.C      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/NS_dstat<7>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O115
+    SLICE_X59Y115.B3     net (fanout=1)        0.399   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O114
+    SLICE_X59Y115.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O116
+    SLICE_X59Y115.C2     net (fanout=1)        0.533   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O115
+    SLICE_X59Y115.CLK    Tas                   0.060   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O127
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    -------------------------------------------------  ---------------------------
+    Total                                      2.883ns (0.777ns logic, 2.106ns route)
+                                                       (27.0% logic, 73.0% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     2.851ns (data path - clock path skew + uncertainty)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/G_NS[2].U_NSQ (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_TDO (FF)
+  Data Path Delay:      2.816ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/rx_clk_buf_out<0> rising
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/G_NS[2].U_NSQ to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X61Y113.CQ     Tcko                  0.283   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/NS_dstat<3>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/G_NS[2].U_NSQ
+    SLICE_X58Y114.D2     net (fanout=1)        0.682   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/NS_dstat<2>
+    SLICE_X58Y114.CMUX   Topdc                 0.309   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/WCNT_LCMP_Q
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DMUX4/U_CS_MUX/I3.U_MUX8/Mmux_O_4
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DMUX4/U_CS_MUX/I3.U_MUX8/Mmux_O_2_f7
+    SLICE_X59Y114.C1     net (fanout=1)        0.428   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/DSTAT<4>
+    SLICE_X59Y114.C      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/NS_dstat<7>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O115
+    SLICE_X59Y115.B3     net (fanout=1)        0.399   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O114
+    SLICE_X59Y115.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O116
+    SLICE_X59Y115.C2     net (fanout=1)        0.533   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O115
+    SLICE_X59Y115.CLK    Tas                   0.060   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O127
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    -------------------------------------------------  ---------------------------
+    Total                                      2.816ns (0.774ns logic, 2.042ns route)
+                                                       (27.5% logic, 72.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_NS0/I_YESLUT6.I_YES_RPM.U_SRL32_A (SLICE_X64Y114.A4), 1 path
+--------------------------------------------------------------------------------
+Delay (setup path):     1.760ns (data path)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/F_NO_TCMC.U_FDR (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_NS0/I_YESLUT6.I_YES_RPM.U_SRL32_A (FF)
+  Data Path Delay:      1.760ns (Levels of Logic = 0)
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/rx_clk_buf_out<0> rising
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/F_NO_TCMC.U_FDR to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_NS0/I_YESLUT6.I_YES_RPM.U_SRL32_A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X54Y110.AQ     Tcko                  0.322   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/iTRIGGER
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/F_NO_TCMC.U_FDR
+    SLICE_X64Y114.A4     net (fanout=20)       1.438   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/iTRIGGER
+    -------------------------------------------------  ---------------------------
+    Total                                      1.760ns (0.322ns logic, 1.438ns route)
+                                                       (18.3% logic, 81.7% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_J_CLK = PERIOD TIMEGRP "J_CLK" 30 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 5994 paths analyzed, 895 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   6.079ns.
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_TDO_reg (SLICE_X51Y137.A6), 211 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     23.921ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36 (RAM)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_TDO_reg (FF)
+  Requirement:          30.000ns
+  Data Path Delay:      6.044ns (Levels of Logic = 5)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 30.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36 to Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_TDO_reg
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X3Y19.DOPADOP1Trcko_DO              1.784   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36
+    SLICE_X40Y99.C1      net (fanout=1)        0.828   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/rd_data<53>
+    SLICE_X40Y99.CMUX    Tilo                  0.312   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/iDATA<95>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I6.U_MUX64/Mmux_O_8_G
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I6.U_MUX64/Mmux_O_8
+    SLICE_X46Y110.A1     net (fanout=1)        1.241   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I6.U_MUX64/Mmux_O_8
+    SLICE_X46Y110.A      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/TRIGGER_dstat
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/rd_col_addr_dly<5>1
+    SLICE_X46Y110.B3     net (fanout=1)        0.314   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/iDATA_DOUT
+    SLICE_X46Y110.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/TRIGGER_dstat
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_DOUT
+    SLICE_X51Y137.B4     net (fanout=1)        1.225   Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_1<3>
+    SLICE_X51Y137.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iTDO
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O1_SW0
+    SLICE_X51Y137.A6     net (fanout=1)        0.097   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/N2
+    SLICE_X51Y137.CLK    Tas                   0.060   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iTDO
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O1
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_TDO_reg
+    -------------------------------------------------  ---------------------------
+    Total                                      6.044ns (2.339ns logic, 3.705ns route)
+                                                       (38.7% logic, 61.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     24.011ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36 (RAM)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_TDO_reg (FF)
+  Requirement:          30.000ns
+  Data Path Delay:      5.954ns (Levels of Logic = 5)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 30.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36 to Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_TDO_reg
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X3Y19.DOADO15 Trcko_DO              1.784   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36
+    SLICE_X40Y99.D3      net (fanout=1)        0.741   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/rd_data<52>
+    SLICE_X40Y99.CMUX    Topdc                 0.309   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/iDATA<95>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I6.U_MUX64/Mmux_O_8_F
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I6.U_MUX64/Mmux_O_8
+    SLICE_X46Y110.A1     net (fanout=1)        1.241   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I6.U_MUX64/Mmux_O_8
+    SLICE_X46Y110.A      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/TRIGGER_dstat
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/rd_col_addr_dly<5>1
+    SLICE_X46Y110.B3     net (fanout=1)        0.314   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/iDATA_DOUT
+    SLICE_X46Y110.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/TRIGGER_dstat
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_DOUT
+    SLICE_X51Y137.B4     net (fanout=1)        1.225   Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_1<3>
+    SLICE_X51Y137.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iTDO
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O1_SW0
+    SLICE_X51Y137.A6     net (fanout=1)        0.097   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/N2
+    SLICE_X51Y137.CLK    Tas                   0.060   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iTDO
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O1
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_TDO_reg
+    -------------------------------------------------  ---------------------------
+    Total                                      5.954ns (2.336ns logic, 3.618ns route)
+                                                       (39.2% logic, 60.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     24.038ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36 (RAM)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_TDO_reg (FF)
+  Requirement:          30.000ns
+  Data Path Delay:      5.927ns (Levels of Logic = 5)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 30.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36 to Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_TDO_reg
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X3Y19.DOADO12 Trcko_DO              1.784   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36
+    SLICE_X40Y99.C3      net (fanout=1)        0.711   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/rd_data<49>
+    SLICE_X40Y99.CMUX    Tilo                  0.312   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/iDATA<95>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I6.U_MUX64/Mmux_O_8_G
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I6.U_MUX64/Mmux_O_8
+    SLICE_X46Y110.A1     net (fanout=1)        1.241   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I6.U_MUX64/Mmux_O_8
+    SLICE_X46Y110.A      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/TRIGGER_dstat
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/rd_col_addr_dly<5>1
+    SLICE_X46Y110.B3     net (fanout=1)        0.314   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/iDATA_DOUT
+    SLICE_X46Y110.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/TRIGGER_dstat
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_DOUT
+    SLICE_X51Y137.B4     net (fanout=1)        1.225   Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_1<3>
+    SLICE_X51Y137.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iTDO
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O1_SW0
+    SLICE_X51Y137.A6     net (fanout=1)        0.097   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/N2
+    SLICE_X51Y137.CLK    Tas                   0.060   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iTDO
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O1
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_TDO_reg
+    -------------------------------------------------  ---------------------------
+    Total                                      5.927ns (2.339ns logic, 3.588ns route)
+                                                       (39.5% logic, 60.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_TDO (SLICE_X59Y115.C2), 92 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     25.338ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/U_SYNC (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_TDO (FF)
+  Requirement:          30.000ns
+  Data Path Delay:      4.627ns (Levels of Logic = 5)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 30.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/U_SYNC to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X62Y154.AQ     Tcko                  0.283   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iSYNC
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/U_SYNC
+    SLICE_X62Y154.A5     net (fanout=1)        0.171   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iSYNC
+    SLICE_X62Y154.A      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iSYNC
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/U_DATA_VALID
+    SLICE_X57Y115.B2     net (fanout=18)       2.309   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/iDATA_VALID
+    SLICE_X57Y115.BMUX   Tilo                  0.175   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/STATE_dstat<1>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[0].U_LCE
+    SLICE_X59Y116.A2     net (fanout=5)        0.542   Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_1<4>
+    SLICE_X59Y116.AMUX   Tilo                  0.173   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/cfg_data_vec<16>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O113_SW2
+    SLICE_X59Y115.B5     net (fanout=1)        0.259   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/N40
+    SLICE_X59Y115.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O116
+    SLICE_X59Y115.C2     net (fanout=1)        0.533   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O115
+    SLICE_X59Y115.CLK    Tas                   0.060   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O127
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    -------------------------------------------------  ---------------------------
+    Total                                      4.627ns (0.813ns logic, 3.814ns route)
+                                                       (17.6% logic, 82.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     25.615ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/U_SYNC (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_TDO (FF)
+  Requirement:          30.000ns
+  Data Path Delay:      4.350ns (Levels of Logic = 5)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 30.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/U_SYNC to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X62Y154.AQ     Tcko                  0.283   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iSYNC
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/U_SYNC
+    SLICE_X62Y154.A5     net (fanout=1)        0.171   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iSYNC
+    SLICE_X62Y154.A      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iSYNC
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/U_DATA_VALID
+    SLICE_X57Y115.B2     net (fanout=18)       2.309   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/iDATA_VALID
+    SLICE_X57Y115.BMUX   Tilo                  0.175   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/STATE_dstat<1>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[0].U_LCE
+    SLICE_X59Y115.D1     net (fanout=5)        0.535   Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_1<4>
+    SLICE_X59Y115.D      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O113_SW1_ML_MUXF7_LUT
+    SLICE_X59Y115.B6     net (fanout=1)        0.101   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/N39
+    SLICE_X59Y115.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O116
+    SLICE_X59Y115.C2     net (fanout=1)        0.533   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O115
+    SLICE_X59Y115.CLK    Tas                   0.060   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O127
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    -------------------------------------------------  ---------------------------
+    Total                                      4.350ns (0.701ns logic, 3.649ns route)
+                                                       (16.1% logic, 83.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     25.698ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/U_SYNC (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_TDO (FF)
+  Requirement:          30.000ns
+  Data Path Delay:      4.267ns (Levels of Logic = 5)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 30.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/U_SYNC to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X62Y154.AQ     Tcko                  0.283   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iSYNC
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/U_SYNC
+    SLICE_X62Y154.A5     net (fanout=1)        0.171   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iSYNC
+    SLICE_X62Y154.A      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iSYNC
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/U_DATA_VALID
+    SLICE_X57Y115.B2     net (fanout=18)       2.309   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/iDATA_VALID
+    SLICE_X57Y115.BMUX   Tilo                  0.175   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/STATE_dstat<1>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[0].U_LCE
+    SLICE_X57Y115.A6     net (fanout=5)        0.200   Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_1<4>
+    SLICE_X57Y115.A      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/STATE_dstat<1>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O113_SW0
+    SLICE_X59Y115.B4     net (fanout=1)        0.353   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/N38
+    SLICE_X59Y115.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O116
+    SLICE_X59Y115.C2     net (fanout=1)        0.533   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O115
+    SLICE_X59Y115.CLK    Tas                   0.060   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O127
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    -------------------------------------------------  ---------------------------
+    Total                                      4.267ns (0.701ns logic, 3.566ns route)
+                                                       (16.4% logic, 83.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_NE0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/U_SRLA (SLICE_X40Y88.CE), 11 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     25.373ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/U_SYNC (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_NE0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/U_SRLA (FF)
+  Requirement:          30.000ns
+  Data Path Delay:      4.592ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 30.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/U_SYNC to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_NE0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/U_SRLA
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X62Y154.AQ     Tcko                  0.283   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iSYNC
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/U_SYNC
+    SLICE_X62Y154.A5     net (fanout=1)        0.171   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iSYNC
+    SLICE_X62Y154.A      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iSYNC
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/U_DATA_VALID
+    SLICE_X57Y115.B2     net (fanout=18)       2.309   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/iDATA_VALID
+    SLICE_X57Y115.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/STATE_dstat<1>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[0].U_HCE
+    SLICE_X40Y88.CE      net (fanout=7)        1.639   Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_1<20>
+    SLICE_X40Y88.CLK     Tceck                 0.068   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_NE0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/U_MUXD/O
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_NE0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/U_SRLA
+    -------------------------------------------------  ---------------------------
+    Total                                      4.592ns (0.473ns logic, 4.119ns route)
+                                                       (10.3% logic, 89.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     25.882ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[15].I_EQ0.U_TARGET (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_NE0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/U_SRLA (FF)
+  Requirement:          30.000ns
+  Data Path Delay:      4.083ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 30.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[15].I_EQ0.U_TARGET to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_NE0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/U_SRLA
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y137.DQ     Tcko                  0.322   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID<3>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[15].I_EQ0.U_TARGET
+    SLICE_X51Y136.B1     net (fanout=4)        0.623   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID<3>
+    SLICE_X51Y136.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID_SEL<1>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[1].U_LUT
+    SLICE_X57Y115.B4     net (fanout=9)        1.309   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID_SEL<1>
+    SLICE_X57Y115.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/STATE_dstat<1>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[0].U_HCE
+    SLICE_X40Y88.CE      net (fanout=7)        1.639   Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_1<20>
+    SLICE_X40Y88.CLK     Tceck                 0.068   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_NE0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/U_MUXD/O
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_NE0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/U_SRLA
+    -------------------------------------------------  ---------------------------
+    Total                                      4.083ns (0.512ns logic, 3.571ns route)
+                                                       (12.5% logic, 87.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     25.938ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[13].I_NE0.U_TARGET (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_NE0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/U_SRLA (FF)
+  Requirement:          30.000ns
+  Data Path Delay:      4.027ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 30.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[13].I_NE0.U_TARGET to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_NE0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/U_SRLA
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y137.BQ     Tcko                  0.322   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID<3>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[13].I_NE0.U_TARGET
+    SLICE_X51Y136.B2     net (fanout=4)        0.567   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID<1>
+    SLICE_X51Y136.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID_SEL<1>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[1].U_LUT
+    SLICE_X57Y115.B4     net (fanout=9)        1.309   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCORE_ID_SEL<1>
+    SLICE_X57Y115.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/STATE_dstat<1>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[0].U_HCE
+    SLICE_X40Y88.CE      net (fanout=7)        1.639   Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_1<20>
+    SLICE_X40Y88.CLK     Tceck                 0.068   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_NE0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/U_MUXD/O
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_NE0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/U_SRLA
+    -------------------------------------------------  ---------------------------
+    Total                                      4.027ns (0.512ns logic, 3.515ns route)
+                                                       (12.7% logic, 87.3% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_J_CLK = PERIOD TIMEGRP "J_CLK" 30 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[4].U_SEL (SLICE_X44Y145.A4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.119ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[3].U_SEL (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[4].U_SEL (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.119ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 30.000ns
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 30.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[3].U_SEL to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[4].U_SEL
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X44Y145.DQ     Tcko                  0.115   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/cfg_data_vec<4>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[3].U_SEL
+    SLICE_X44Y145.A4     net (fanout=2)        0.105   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/cfg_data_vec<4>
+    SLICE_X44Y145.CLK    Tah         (-Th)     0.101   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/cfg_data_vec<4>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/cfg_data_vec<4>_rt
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[4].U_SEL
+    -------------------------------------------------  ---------------------------
+    Total                                      0.119ns (0.014ns logic, 0.105ns route)
+                                                       (11.8% logic, 88.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/I_MULT_ROW.U_RD_COL_ADDR_DLY/G_REG_BIT[0].U_FDRE (SLICE_X39Y137.AX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.120ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/I_MULT_ROW.U_RD_COL_ADDR_B/u_cnt/G[0].U_FDRE (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/I_MULT_ROW.U_RD_COL_ADDR_DLY/G_REG_BIT[0].U_FDRE (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.120ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 30.000ns
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 30.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/I_MULT_ROW.U_RD_COL_ADDR_B/u_cnt/G[0].U_FDRE to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/I_MULT_ROW.U_RD_COL_ADDR_DLY/G_REG_BIT[0].U_FDRE
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X38Y136.AQ     Tcko                  0.098   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/rd_col_addr_wide<3>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/I_MULT_ROW.U_RD_COL_ADDR_B/u_cnt/G[0].U_FDRE
+    SLICE_X39Y137.AX     net (fanout=3)        0.098   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/rd_col_addr_wide<0>
+    SLICE_X39Y137.CLK    Tckdi       (-Th)     0.076   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/rd_col_addr_dly<3>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/I_MULT_ROW.U_RD_COL_ADDR_DLY/G_REG_BIT[0].U_FDRE
+    -------------------------------------------------  ---------------------------
+    Total                                      0.120ns (0.022ns logic, 0.098ns route)
+                                                       (18.3% logic, 81.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[12].U_SEL (SLICE_X42Y146.A4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.122ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[11].U_SEL (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[12].U_SEL (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.122ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 30.000ns
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 30.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[11].U_SEL to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[12].U_SEL
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X42Y146.DQ     Tcko                  0.098   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/cfg_data_vec<12>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[11].U_SEL
+    SLICE_X42Y146.A4     net (fanout=1)        0.106   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/cfg_data_vec<12>
+    SLICE_X42Y146.CLK    Tah         (-Th)     0.082   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/cfg_data_vec<12>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/cfg_data_vec<12>_rt
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[12].U_SEL
+    -------------------------------------------------  ---------------------------
+    Total                                      0.122ns (0.016ns logic, 0.106ns route)
+                                                       (13.1% logic, 86.9% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_J_CLK = PERIOD TIMEGRP "J_CLK" 30 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 28.148ns (period - min period limit)
+  Period: 30.000ns
+  Min period limit: 1.852ns (539.957MHz) (Trper_CLKA)
+  Physical resource: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/CLKARDCLKL
+  Logical resource: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/CLKARDCLKL
+  Location pin: RAMB36_X3Y27.CLKARDCLKL
+  Clock network: Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0>
+--------------------------------------------------------------------------------
+Slack: 28.148ns (period - min period limit)
+  Period: 30.000ns
+  Min period limit: 1.852ns (539.957MHz) (Trper_CLKA)
+  Physical resource: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/CLKARDCLKL
+  Logical resource: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/CLKARDCLKL
+  Location pin: RAMB36_X3Y21.CLKARDCLKL
+  Clock network: Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0>
+--------------------------------------------------------------------------------
+Slack: 28.148ns (period - min period limit)
+  Period: 30.000ns
+  Min period limit: 1.852ns (539.957MHz) (Trper_CLKA)
+  Physical resource: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/CLKARDCLKL
+  Logical resource: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/CLKARDCLKL
+  Location pin: RAMB36_X2Y28.CLKARDCLKL
+  Clock network: Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0>
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_D2_TO_T2_path" TIG;
+
+ 6 paths analyzed, 6 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_TDO (SLICE_X59Y115.C2), 1 path
+--------------------------------------------------------------------------------
+Delay (setup path):     2.461ns (data path - clock path skew + uncertainty)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_TDO (FF)
+  Data Path Delay:      2.426ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_1<13> falling
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y119.AQ     Tcklo                 0.318   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC
+    SLICE_X57Y118.B5     net (fanout=1)        0.262   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+    SLICE_X57Y118.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_D0
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/Mmux_DIRTY_dstat11
+    SLICE_X57Y118.A2     net (fanout=2)        0.431   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_dstat
+    SLICE_X57Y118.A      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_D0
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O112
+    SLICE_X59Y115.B2     net (fanout=1)        0.639   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O111
+    SLICE_X59Y115.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O116
+    SLICE_X59Y115.C2     net (fanout=1)        0.533   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O115
+    SLICE_X59Y115.CLK    Tas                   0.060   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O127
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    -------------------------------------------------  ---------------------------
+    Total                                      2.426ns (0.561ns logic, 1.865ns route)
+                                                       (23.1% logic, 76.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_TDO (SLICE_X50Y140.D3), 1 path
+--------------------------------------------------------------------------------
+Delay (setup path):     1.600ns (data path - clock path skew + uncertainty)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_TDO (FF)
+  Data Path Delay:      1.565ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<13> falling
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X49Y140.BQ     Tcklo                 0.294   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC
+    SLICE_X51Y140.B6     net (fanout=1)        0.199   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+    SLICE_X51Y140.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_D1
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/Mmux_DIRTY_dstat11
+    SLICE_X51Y140.A6     net (fanout=2)        0.101   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_dstat
+    SLICE_X51Y140.A      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_D1
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O112
+    SLICE_X50Y140.C1     net (fanout=1)        0.453   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O111
+    SLICE_X50Y140.C      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O116
+    SLICE_X50Y140.D3     net (fanout=1)        0.316   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O115
+    SLICE_X50Y140.CLK    Tas                   0.019   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O127
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    -------------------------------------------------  ---------------------------
+    Total                                      1.565ns (0.496ns logic, 1.069ns route)
+                                                       (31.7% logic, 68.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDPE (SLICE_X57Y119.DX), 1 path
+--------------------------------------------------------------------------------
+Delay (setup path):     1.006ns (data path - clock path skew + uncertainty)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDPE (FF)
+  Data Path Delay:      0.971ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_1<13> falling
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDPE
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y119.AQ     Tcklo                 0.318   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC
+    SLICE_X57Y118.B5     net (fanout=1)        0.262   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+    SLICE_X57Y118.B      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_D0
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/Mmux_DIRTY_dstat11
+    SLICE_X57Y119.DX     net (fanout=2)        0.314   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_dstat
+    SLICE_X57Y119.CLK    Tdick                 0.016   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_D1
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDPE
+    -------------------------------------------------  ---------------------------
+    Total                                      0.971ns (0.395ns logic, 0.576ns route)
+                                                       (40.7% logic, 59.3% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: PATH "TS_D2_TO_T2_path" TIG;
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDPE (SLICE_X51Y140.B6), 1 path
+--------------------------------------------------------------------------------
+Delay (hold path):      0.090ns (datapath - clock path skew - uncertainty)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDPE (FF)
+  Data Path Delay:      0.125ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<13> falling
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Data Path at Fast Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDPE
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X49Y140.BQ     Tcklo                 0.095   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC
+    SLICE_X51Y140.B6     net (fanout=1)        0.087   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+    SLICE_X51Y140.CLK    Tah         (-Th)     0.057   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_D1
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/Mmux_DIRTY_dstat11
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDPE
+    -------------------------------------------------  ---------------------------
+    Total                                      0.125ns (0.038ns logic, 0.087ns route)
+                                                       (30.4% logic, 69.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDCE (SLICE_X57Y118.B5), 1 path
+--------------------------------------------------------------------------------
+Delay (hold path):      0.135ns (datapath - clock path skew - uncertainty)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDCE (FF)
+  Data Path Delay:      0.170ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_1<13> falling
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Data Path at Fast Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDCE
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y119.AQ     Tcklo                 0.118   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC
+    SLICE_X57Y118.B5     net (fanout=1)        0.109   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+    SLICE_X57Y118.CLK    Tah         (-Th)     0.057   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_D0
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/Mmux_DIRTY_dstat11
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDCE
+    -------------------------------------------------  ---------------------------
+    Total                                      0.170ns (0.061ns logic, 0.109ns route)
+                                                       (35.9% logic, 64.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDCE (SLICE_X51Y141.AX), 1 path
+--------------------------------------------------------------------------------
+Delay (hold path):      0.201ns (datapath - clock path skew - uncertainty)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDCE (FF)
+  Data Path Delay:      0.236ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<13> falling
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Data Path at Fast Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDCE
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X49Y140.BQ     Tcklo                 0.095   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC
+    SLICE_X51Y140.B6     net (fanout=1)        0.087   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+    SLICE_X51Y140.B      Tilo                  0.034   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_D1
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/Mmux_DIRTY_dstat11
+    SLICE_X51Y141.AX     net (fanout=2)        0.096   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_dstat
+    SLICE_X51Y141.CLK    Tckdi       (-Th)     0.076   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_D0
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDCE
+    -------------------------------------------------  ---------------------------
+    Total                                      0.236ns (0.053ns logic, 0.183ns route)
+                                                       (22.5% logic, 77.5% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_J2_TO_D2_path" TIG;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_J3_TO_D2_path" TIG;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_J4_TO_D2_path" TIG;
+
+ 24 paths analyzed, 4 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (SLICE_X49Y140.SR), 1 path
+--------------------------------------------------------------------------------
+Delay (setup path):     3.966ns (data path - clock path skew + uncertainty)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[3].U_FD (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Data Path Delay:      1.087ns (Levels of Logic = 0)
+  Clock Path Skew:      -2.844ns (1.401 - 4.245)
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/tx_clk_buf_out<0> rising
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<13> falling
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[3].U_FD to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X48Y137.AQ     Tcko                  0.322   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/iARM
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[3].U_FD
+    SLICE_X49Y140.SR     net (fanout=9)        0.507   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/iARM
+    SLICE_X49Y140.CLK    Trck                  0.258   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC
+    -------------------------------------------------  ---------------------------
+    Total                                      1.087ns (0.580ns logic, 0.507ns route)
+                                                       (53.4% logic, 46.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (SLICE_X56Y119.SR), 1 path
+--------------------------------------------------------------------------------
+Delay (setup path):     3.860ns (data path - clock path skew + uncertainty)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[3].U_FD (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Data Path Delay:      0.968ns (Levels of Logic = 0)
+  Clock Path Skew:      -2.857ns (1.413 - 4.270)
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/rx_clk_buf_out<0> rising
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_1<13> falling
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[3].U_FD to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X53Y122.AQ     Tcko                  0.283   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/iARM
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[3].U_FD
+    SLICE_X56Y119.SR     net (fanout=9)        0.464   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/iARM
+    SLICE_X56Y119.CLK    Trck                  0.221   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC
+    -------------------------------------------------  ---------------------------
+    Total                                      0.968ns (0.504ns logic, 0.464ns route)
+                                                       (52.1% logic, 47.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (SLICE_X56Y119.CLK), 11 paths
+--------------------------------------------------------------------------------
+Delay (setup path):     2.842ns (data path)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/U_SYNC (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Data Path Delay:      2.842ns (Levels of Logic = 2)
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/U_SYNC to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X62Y154.AQ     Tcko                  0.283   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iSYNC
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_SYNC/U_SYNC
+    SLICE_X62Y154.A5     net (fanout=1)        0.171   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iSYNC
+    SLICE_X62Y154.A      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iSYNC
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/U_DATA_VALID
+    SLICE_X55Y122.A4     net (fanout=18)       1.850   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/iDATA_VALID
+    SLICE_X55Y122.A      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/din_latched
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[9].U_LCE
+    SLICE_X56Y119.CLK    net (fanout=4)        0.416   Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_1<13>
+    -------------------------------------------------  ---------------------------
+    Total                                      2.842ns (0.405ns logic, 2.437ns route)
+                                                       (14.3% logic, 85.7% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     2.281ns (data path)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[6].I_NE0.U_TARGET (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Data Path Delay:      2.281ns (Levels of Logic = 2)
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[6].I_NE0.U_TARGET to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y132.AQ     Tcko                  0.283   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCOMMAND_GRP<1>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[6].I_NE0.U_TARGET
+    SLICE_X49Y132.C4     net (fanout=2)        0.346   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCOMMAND_GRP<0>
+    SLICE_X49Y132.CMUX   Tilo                  0.168   Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_1<22>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/U_CMDGRP0
+    SLICE_X55Y122.A1     net (fanout=16)       1.007   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/iCOMMAND_GRP_SEL<0>
+    SLICE_X55Y122.A      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/din_latched
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[9].U_LCE
+    SLICE_X56Y119.CLK    net (fanout=4)        0.416   Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_1<13>
+    -------------------------------------------------  ---------------------------
+    Total                                      2.281ns (0.512ns logic, 1.769ns route)
+                                                       (22.4% logic, 77.6% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     2.201ns (data path)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[7].I_NE0.U_TARGET (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Data Path Delay:      2.201ns (Levels of Logic = 2)
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<0> rising at 0.000ns
+
+  Maximum Data Path at Slow Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[7].I_NE0.U_TARGET to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y132.BQ     Tcko                  0.283   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCOMMAND_GRP<1>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CMD/G_TARGET[7].I_NE0.U_TARGET
+    SLICE_X49Y132.C5     net (fanout=3)        0.266   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/iCOMMAND_GRP<1>
+    SLICE_X49Y132.CMUX   Tilo                  0.168   Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_1<22>
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/U_CMDGRP0
+    SLICE_X55Y122.A1     net (fanout=16)       1.007   Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/iCOMMAND_GRP_SEL<0>
+    SLICE_X55Y122.A      Tilo                  0.061   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/din_latched
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/icon/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[9].U_LCE
+    SLICE_X56Y119.CLK    net (fanout=4)        0.416   Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_1<13>
+    -------------------------------------------------  ---------------------------
+    Total                                      2.201ns (0.512ns logic, 1.689ns route)
+                                                       (23.3% logic, 76.7% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: PATH "TS_J4_TO_D2_path" TIG;
+--------------------------------------------------------------------------------
+
+Paths for end point Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (SLICE_X56Y119.SR), 1 path
+--------------------------------------------------------------------------------
+Delay (hold path):      0.992ns (datapath - clock path skew - uncertainty)
+  Source:               Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[3].U_FD (FF)
+  Destination:          Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Data Path Delay:      0.372ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.620ns (1.648 - 2.268)
+  Source Clock:         Connect_XVCR_Module_loop[0].XCVR_Module_gen/rx_clk_buf_out<0> rising
+  Destination Clock:    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_1<13> falling
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[3].U_FD to Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X53Y122.AQ     Tcko                  0.098   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/iARM
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[3].U_FD
+    SLICE_X56Y119.SR     net (fanout=9)        0.220   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/iARM
+    SLICE_X56Y119.CLK    Tremck      (-Th)    -0.054   Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+                                                       Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC
+    -------------------------------------------------  ---------------------------
+    Total                                      0.372ns (0.152ns logic, 0.220ns route)
+                                                       (40.9% logic, 59.1% route)
+
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+No constraints were found to generate data for the Data Sheet Report section.
+Use the Advanced Analysis (-a) option or generate global constraints for each
+clock, its pad to setup and clock to pad paths, and a pad to pad constraint.
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 11455 paths, 0 nets, and 2223 connections
+
+Design statistics:
+   Minimum period:   6.079ns{1}   (Maximum frequency: 164.501MHz)
+   Maximum path delay from/to any node:   2.979ns
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Mon Apr 01 00:13:26 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 5246 MB
+
+
+
