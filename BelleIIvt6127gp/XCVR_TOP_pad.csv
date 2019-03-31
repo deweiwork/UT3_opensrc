@@ -1,7 +1,7 @@
 #Release 14.7 - par P.20131013 (nt64)
 #Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-#Mon Apr 01 00:13:06 2019
+#Mon Apr 01 02:10:40 2019
 
 #
 ## NOTE: This file is designed to be imported into a spreadsheet program
@@ -477,7 +477,7 @@ AK19,,,GND,,,,,,,,,,,,
 AK20,error_cnt_ch_bank<0><3><2>,IOB,IO_L12P_VRN_31,OUTPUT,LVCMOS25*,31,12,SLOW,,,,UNLOCATED,YES,NONE,
 AK21,error_cnt_ch_bank<0><0><10>,IOB,IO_L3N_31,OUTPUT,LVCMOS25*,31,12,SLOW,,,,UNLOCATED,YES,NONE,
 AK22,error_cnt_ch_bank<0><2><12>,IOB,IO_L6P_21,OUTPUT,LVCMOS25*,21,12,SLOW,,,,UNLOCATED,YES,NONE,
-AK23,error_cnt_ch_bank<0><2><2>,IOB,IO_L3N_21,OUTPUT,LVCMOS25*,21,12,SLOW,,,,UNLOCATED,YES,NONE,
+AK23,error_cnt_ch_bank<0><2><7>,IOB,IO_L3N_21,OUTPUT,LVCMOS25*,21,12,SLOW,,,,UNLOCATED,YES,NONE,
 AK24,,,VCCO_21,,,21,,,,,2.50,,,,
 AK25,,IOBS,IO_L18N_22,UNUSED,,22,,,,,,,,,
 AK26,,IOBS,IO_L12N_VRP_22,UNUSED,,22,,,,,,,,,
@@ -568,7 +568,7 @@ AM22,error_cnt_ch_bank<0><1><8>,IOB,IO_L9N_MRCC_21,OUTPUT,LVCMOS25*,21,12,SLOW,,
 AM23,,,GND,,,,,,,,,,,,
 AM24,error_cnt_ch_bank<0><1><15>,IOB,IO_L15N_21,OUTPUT,LVCMOS25*,21,12,SLOW,,,,UNLOCATED,YES,NONE,
 AM25,error_cnt_ch_bank<0><1><11>,IOB,IO_L13N_21,OUTPUT,LVCMOS25*,21,12,SLOW,,,,UNLOCATED,YES,NONE,
-AM26,error_cnt_ch_bank<0><2><7>,IOB,IO_L1P_21,OUTPUT,LVCMOS25*,21,12,SLOW,,,,UNLOCATED,YES,NONE,
+AM26,error_cnt_ch_bank<0><2><2>,IOB,IO_L1P_21,OUTPUT,LVCMOS25*,21,12,SLOW,,,,UNLOCATED,YES,NONE,
 AM27,,IOBM,IO_L15P_22,UNUSED,,22,,,,,,,,,
 AM28,,,VCCO_22,,,22,,,,,any******,,,,
 AM29,,IOBS,IO_L18N_23,UNUSED,,23,,,,,,,,,

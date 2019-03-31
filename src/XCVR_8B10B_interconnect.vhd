@@ -697,6 +697,9 @@ begin
     generate_16B20B_enc_loop : for i in 0 to (num_of_xcvr_ch - 1) generate
         enc : entity work.encoder_16b20b
             port map(
+                RESET_N    => RST_N,
+                CLK        => tx_clk_buf_out(i),
+
                 data_in  => xcvr_tx_Para_data_ch(i),
                 disp_in  => tx_data_k_ch(i),
 
@@ -705,8 +708,11 @@ begin
     end generate generate_16B20B_enc_loop;
 
     generate_16B20B_dec_loop : for i in 0 to (num_of_xcvr_ch - 1) generate
-        enc : entity work.decoder_16b20b
+        dec : entity work.decoder_16b20b
             port map(
+                RESET_N    => RST_N,
+                CLK        => rx_clk_buf_out(i),
+
                 data_in  => from_xcvr_Rx_opensrc(i),
 
                 data_out => xcvr_rx_Para_data_ch(i),
