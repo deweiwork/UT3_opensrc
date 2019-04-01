@@ -53,7 +53,7 @@ begin
   decoder_1 : decode_v
     port map(
       datain  => data_in_buf_1,
-      dispin  => '1',
+      dispin  => '0',
       dataout => data_out_buf_1,
       dispout => open,
 

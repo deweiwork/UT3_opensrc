@@ -346,7 +346,12 @@ end component;
       TRIG2 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
       TRIG3 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
       TRIG4 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-      TRIG5 : IN STD_LOGIC_VECTOR(15 DOWNTO 0));
+      TRIG5 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      TRIG6 : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
+      TRIG7 : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
+      TRIG8 : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
+      TRIG9 : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
+      TRIG10 : IN STD_LOGIC_VECTOR(7 DOWNTO 0));
   
   end component;
 
@@ -762,23 +767,32 @@ begin
         port map (
             CONTROL => chip_scope_ctrl_0,
             CLK => tx_clk_buf_out(0),
-            TRIG0 => tx_Para_data_ch(0),
-            TRIG1 => tx_Para_data_ch(1),
-            TRIG2 => tx_Para_data_ch(2),
-            TRIG3 => tx_Para_data_ch(3),
-            TRIG4 => (others =>'0'),
-            TRIG5 => (others =>'0')
+            TRIG0 => xcvr_tx_Para_data_ch(0),
+            TRIG1 => xcvr_tx_Para_data_ch(1),
+            TRIG2 => xcvr_tx_Para_data_ch(2),
+            TRIG3 => xcvr_tx_Para_data_ch(3),
+            TRIG4 => TX_traffic_ready_ch & "000000000000",
+            TRIG5 => lane_up & "000000000000000",
+            TRIG6 => to_xcvr_Tx_opensrc(0),
+            TRIG7 => to_xcvr_Tx_opensrc(1),
+            TRIG8 => to_xcvr_Tx_opensrc(2),
+            TRIG9 => to_xcvr_Tx_opensrc(3),
+            TRIG10 => rx_comma_detected & rx_byte_aligned
         );
     ila_rx : chipscope_ila
         port map (
             CONTROL => chip_scope_ctrl_1,
             CLK => rx_clk_buf_out(0),
-            TRIG0 => rx_Para_data_ch(0),
-            TRIG1 => rx_Para_data_ch(1),
-            TRIG2 => rx_Para_data_ch(2),
-            TRIG3 => rx_Para_data_ch(3),
-            TRIG4 => (others =>'0'),
-            TRIG5 => (others =>'0')
-        );
-
+            TRIG0 => xcvr_rx_Para_data_ch(0),
+            TRIG1 => xcvr_rx_Para_data_ch(1),
+            TRIG2 => xcvr_rx_Para_data_ch(2),
+            TRIG3 => xcvr_rx_Para_data_ch(3),
+            TRIG4 => RX_traffic_ready_ch & "000000000000",
+            TRIG5 => rx_err_detec_ch(0) & rx_err_detec_ch(1) & rx_err_detec_ch(2) & rx_err_detec_ch(3) & rx_disp_err_ch(0) & rx_disp_err_ch(1) &rx_disp_err_ch(2) & rx_disp_err_ch(3),
+            TRIG6 => from_xcvr_Rx_opensrc(0),
+            TRIG7 => from_xcvr_Rx_opensrc(1),
+            TRIG8 => from_xcvr_Rx_opensrc(2),
+            TRIG9 => from_xcvr_Rx_opensrc(3),
+            TRIG10 => (others => '0')
+        );    
 end architecture XCVR_8B10B_interconnect_Top;

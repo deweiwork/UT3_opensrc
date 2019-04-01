@@ -26,8 +26,8 @@ package DataStruct_param_def_header is
     --paramenter of xcvr module
     ---------
     --constant xcvr_ser_internal_loopback_en           : std_logic := '1';--on altera
-    constant xcvr_ser_internal_loopback_en           : std_logic_vector(2 downto 0) := "000";--Xilinx no loopback
-    --constant xcvr_ser_internal_loopback_en           : std_logic_vector(2 downto 0) := "001";--Xilinx pcs loopback
+    --constant xcvr_ser_internal_loopback_en           : std_logic_vector(2 downto 0) := "000";--Xilinx no loopback
+    constant xcvr_ser_internal_loopback_en           : std_logic_vector(2 downto 0) := "001";--Xilinx pcs loopback
     --constant xcvr_ser_internal_loopback_en           : std_logic_vector(2 downto 0) := "010";--Xilinx pma loopback
 
     constant para_data_length_per_ch                 : integer range 1 to 64 := 16;

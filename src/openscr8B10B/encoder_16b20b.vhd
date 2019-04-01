@@ -38,7 +38,7 @@ begin
   encoder_0 : encode_v
     port map(
       datain  => data_in_buf_0,
-      dispin  => '1',
+      dispin  => '0',
       dataout => data_out_buf_0,
       dispout => open
     );
