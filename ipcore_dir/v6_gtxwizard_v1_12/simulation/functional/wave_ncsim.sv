@@ -84,7 +84,8 @@
   waveform  add  -label Receive_Ports_-_Comma_Detection_and_Alignment  -comment  Receive_Ports_-_Comma_Detection_and_Alignment
   waveform  add  -signals  :v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx0_v6_gtxwizard_v1_12_i:RXBYTEISALIGNED_OUT
   waveform  add  -signals  :v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx0_v6_gtxwizard_v1_12_i:RXCOMMADET_OUT
-  waveform  add  -signals  :v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx0_v6_gtxwizard_v1_12_i:RXSLIDE_IN
+  waveform  add  -signals  :v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx0_v6_gtxwizard_v1_12_i:RXENMCOMMAALIGN_IN
+  waveform  add  -signals  :v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx0_v6_gtxwizard_v1_12_i:RXENPCOMMAALIGN_IN
   waveform  add  -label Receive_Ports_-_RX_Data_Path_interface  -comment  Receive_Ports_-_RX_Data_Path_interface
   waveform  add  -signals  :v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx0_v6_gtxwizard_v1_12_i:RXDATA_OUT
   waveform  add  -signals  :v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx0_v6_gtxwizard_v1_12_i:RXRECCLK_OUT
@@ -124,7 +125,8 @@
   waveform  add  -label Receive_Ports_-_Comma_Detection_and_Alignment  -comment  Receive_Ports_-_Comma_Detection_and_Alignment
   waveform  add  -signals  :v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx1_v6_gtxwizard_v1_12_i:RXBYTEISALIGNED_OUT
   waveform  add  -signals  :v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx1_v6_gtxwizard_v1_12_i:RXCOMMADET_OUT
-  waveform  add  -signals  :v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx1_v6_gtxwizard_v1_12_i:RXSLIDE_IN
+  waveform  add  -signals  :v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx1_v6_gtxwizard_v1_12_i:RXENMCOMMAALIGN_IN
+  waveform  add  -signals  :v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx1_v6_gtxwizard_v1_12_i:RXENPCOMMAALIGN_IN
   waveform  add  -label Receive_Ports_-_RX_Data_Path_interface  -comment  Receive_Ports_-_RX_Data_Path_interface
   waveform  add  -signals  :v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx1_v6_gtxwizard_v1_12_i:RXDATA_OUT
   waveform  add  -signals  :v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx1_v6_gtxwizard_v1_12_i:RXRECCLK_OUT
@@ -164,7 +166,8 @@
   waveform  add  -label Receive_Ports_-_Comma_Detection_and_Alignment  -comment  Receive_Ports_-_Comma_Detection_and_Alignment
   waveform  add  -signals  :v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx2_v6_gtxwizard_v1_12_i:RXBYTEISALIGNED_OUT
   waveform  add  -signals  :v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx2_v6_gtxwizard_v1_12_i:RXCOMMADET_OUT
-  waveform  add  -signals  :v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx2_v6_gtxwizard_v1_12_i:RXSLIDE_IN
+  waveform  add  -signals  :v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx2_v6_gtxwizard_v1_12_i:RXENMCOMMAALIGN_IN
+  waveform  add  -signals  :v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx2_v6_gtxwizard_v1_12_i:RXENPCOMMAALIGN_IN
   waveform  add  -label Receive_Ports_-_RX_Data_Path_interface  -comment  Receive_Ports_-_RX_Data_Path_interface
   waveform  add  -signals  :v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx2_v6_gtxwizard_v1_12_i:RXDATA_OUT
   waveform  add  -signals  :v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx2_v6_gtxwizard_v1_12_i:RXRECCLK_OUT
@@ -204,7 +207,8 @@
   waveform  add  -label Receive_Ports_-_Comma_Detection_and_Alignment  -comment  Receive_Ports_-_Comma_Detection_and_Alignment
   waveform  add  -signals  :v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx3_v6_gtxwizard_v1_12_i:RXBYTEISALIGNED_OUT
   waveform  add  -signals  :v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx3_v6_gtxwizard_v1_12_i:RXCOMMADET_OUT
-  waveform  add  -signals  :v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx3_v6_gtxwizard_v1_12_i:RXSLIDE_IN
+  waveform  add  -signals  :v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx3_v6_gtxwizard_v1_12_i:RXENMCOMMAALIGN_IN
+  waveform  add  -signals  :v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx3_v6_gtxwizard_v1_12_i:RXENPCOMMAALIGN_IN
   waveform  add  -label Receive_Ports_-_RX_Data_Path_interface  -comment  Receive_Ports_-_RX_Data_Path_interface
   waveform  add  -signals  :v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx3_v6_gtxwizard_v1_12_i:RXDATA_OUT
   waveform  add  -signals  :v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx3_v6_gtxwizard_v1_12_i:RXRECCLK_OUT

@@ -87,7 +87,8 @@ port
     --------------- Receive Ports - Comma Detection and Alignment --------------
     RXBYTEISALIGNED_OUT                     : out  std_logic;
     RXCOMMADET_OUT                          : out  std_logic;
-    RXSLIDE_IN                              : in   std_logic;
+    RXENMCOMMAALIGN_IN                      : in   std_logic;
+    RXENPCOMMAALIGN_IN                      : in   std_logic;
     ------------------- Receive Ports - RX Data Path interface -----------------
     RXDATA_OUT                              : out  std_logic_vector(19 downto 0);
     RXRECCLK_OUT                            : out  std_logic;
@@ -335,7 +336,7 @@ begin
         PCOMMA_DETECT                           =>     (TRUE),
         RX_DECODE_SEQ_MATCH                     =>     (FALSE),
         RX_SLIDE_AUTO_WAIT                      =>     (5),
-        RX_SLIDE_MODE                           =>     ("PCS"),
+        RX_SLIDE_MODE                           =>     ("OFF"),
         SHOW_REALIGN_COMMA                      =>     (TRUE),
 
        -----------------RX Loss-of-sync State Machine----------------
@@ -457,9 +458,9 @@ begin
         RXBYTEREALIGN                   =>      open,
         RXCOMMADET                      =>      RXCOMMADET_OUT,
         RXCOMMADETUSE                   =>      tied_to_vcc_i,
-        RXENMCOMMAALIGN                 =>      tied_to_ground_i,
-        RXENPCOMMAALIGN                 =>      tied_to_ground_i,
-        RXSLIDE                         =>      RXSLIDE_IN,
+        RXENMCOMMAALIGN                 =>      RXENMCOMMAALIGN_IN,
+        RXENPCOMMAALIGN                 =>      RXENPCOMMAALIGN_IN,
+        RXSLIDE                         =>      tied_to_ground_i,
         ----------------------- Receive Ports - PRBS Detection ---------------------
         PRBSCNTRESET                    =>      tied_to_ground_i,
         RXENPRBSTST                     =>      tied_to_ground_vec_i(2 downto 0),

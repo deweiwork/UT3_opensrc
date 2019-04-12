@@ -82,7 +82,8 @@ add wave -noupdate -format Literal -radix hexadecimal /DEMO_TB/v6_gtxwizard_v1_1
 add wave -noupdate -divider {Receive Ports - Comma Detection and Alignment }
 add wave -noupdate -format Logic /DEMO_TB/v6_gtxwizard_v1_12_top_i/v6_gtxwizard_v1_12_i/gtx0_v6_gtxwizard_v1_12_i/RXBYTEISALIGNED_OUT
 add wave -noupdate -format Logic /DEMO_TB/v6_gtxwizard_v1_12_top_i/v6_gtxwizard_v1_12_i/gtx0_v6_gtxwizard_v1_12_i/RXCOMMADET_OUT
-add wave -noupdate -format Logic /DEMO_TB/v6_gtxwizard_v1_12_top_i/v6_gtxwizard_v1_12_i/gtx0_v6_gtxwizard_v1_12_i/RXSLIDE_IN
+add wave -noupdate -format Logic /DEMO_TB/v6_gtxwizard_v1_12_top_i/v6_gtxwizard_v1_12_i/gtx0_v6_gtxwizard_v1_12_i/RXENMCOMMAALIGN_IN
+add wave -noupdate -format Logic /DEMO_TB/v6_gtxwizard_v1_12_top_i/v6_gtxwizard_v1_12_i/gtx0_v6_gtxwizard_v1_12_i/RXENPCOMMAALIGN_IN
 add wave -noupdate -divider {Receive Ports - RX Data Path interface }
 add wave -noupdate -format Literal -radix hexadecimal /DEMO_TB/v6_gtxwizard_v1_12_top_i/v6_gtxwizard_v1_12_i/gtx0_v6_gtxwizard_v1_12_i/RXDATA_OUT
 add wave -noupdate -format Logic /DEMO_TB/v6_gtxwizard_v1_12_top_i/v6_gtxwizard_v1_12_i/gtx0_v6_gtxwizard_v1_12_i/RXRECCLK_OUT
@@ -122,7 +123,8 @@ add wave -noupdate -format Literal -radix hexadecimal /DEMO_TB/v6_gtxwizard_v1_1
 add wave -noupdate -divider {Receive Ports - Comma Detection and Alignment }
 add wave -noupdate -format Logic /DEMO_TB/v6_gtxwizard_v1_12_top_i/v6_gtxwizard_v1_12_i/gtx1_v6_gtxwizard_v1_12_i/RXBYTEISALIGNED_OUT
 add wave -noupdate -format Logic /DEMO_TB/v6_gtxwizard_v1_12_top_i/v6_gtxwizard_v1_12_i/gtx1_v6_gtxwizard_v1_12_i/RXCOMMADET_OUT
-add wave -noupdate -format Logic /DEMO_TB/v6_gtxwizard_v1_12_top_i/v6_gtxwizard_v1_12_i/gtx1_v6_gtxwizard_v1_12_i/RXSLIDE_IN
+add wave -noupdate -format Logic /DEMO_TB/v6_gtxwizard_v1_12_top_i/v6_gtxwizard_v1_12_i/gtx1_v6_gtxwizard_v1_12_i/RXENMCOMMAALIGN_IN
+add wave -noupdate -format Logic /DEMO_TB/v6_gtxwizard_v1_12_top_i/v6_gtxwizard_v1_12_i/gtx1_v6_gtxwizard_v1_12_i/RXENPCOMMAALIGN_IN
 add wave -noupdate -divider {Receive Ports - RX Data Path interface }
 add wave -noupdate -format Literal -radix hexadecimal /DEMO_TB/v6_gtxwizard_v1_12_top_i/v6_gtxwizard_v1_12_i/gtx1_v6_gtxwizard_v1_12_i/RXDATA_OUT
 add wave -noupdate -format Logic /DEMO_TB/v6_gtxwizard_v1_12_top_i/v6_gtxwizard_v1_12_i/gtx1_v6_gtxwizard_v1_12_i/RXRECCLK_OUT
@@ -162,7 +164,8 @@ add wave -noupdate -format Literal -radix hexadecimal /DEMO_TB/v6_gtxwizard_v1_1
 add wave -noupdate -divider {Receive Ports - Comma Detection and Alignment }
 add wave -noupdate -format Logic /DEMO_TB/v6_gtxwizard_v1_12_top_i/v6_gtxwizard_v1_12_i/gtx2_v6_gtxwizard_v1_12_i/RXBYTEISALIGNED_OUT
 add wave -noupdate -format Logic /DEMO_TB/v6_gtxwizard_v1_12_top_i/v6_gtxwizard_v1_12_i/gtx2_v6_gtxwizard_v1_12_i/RXCOMMADET_OUT
-add wave -noupdate -format Logic /DEMO_TB/v6_gtxwizard_v1_12_top_i/v6_gtxwizard_v1_12_i/gtx2_v6_gtxwizard_v1_12_i/RXSLIDE_IN
+add wave -noupdate -format Logic /DEMO_TB/v6_gtxwizard_v1_12_top_i/v6_gtxwizard_v1_12_i/gtx2_v6_gtxwizard_v1_12_i/RXENMCOMMAALIGN_IN
+add wave -noupdate -format Logic /DEMO_TB/v6_gtxwizard_v1_12_top_i/v6_gtxwizard_v1_12_i/gtx2_v6_gtxwizard_v1_12_i/RXENPCOMMAALIGN_IN
 add wave -noupdate -divider {Receive Ports - RX Data Path interface }
 add wave -noupdate -format Literal -radix hexadecimal /DEMO_TB/v6_gtxwizard_v1_12_top_i/v6_gtxwizard_v1_12_i/gtx2_v6_gtxwizard_v1_12_i/RXDATA_OUT
 add wave -noupdate -format Logic /DEMO_TB/v6_gtxwizard_v1_12_top_i/v6_gtxwizard_v1_12_i/gtx2_v6_gtxwizard_v1_12_i/RXRECCLK_OUT
@@ -202,7 +205,8 @@ add wave -noupdate -format Literal -radix hexadecimal /DEMO_TB/v6_gtxwizard_v1_1
 add wave -noupdate -divider {Receive Ports - Comma Detection and Alignment }
 add wave -noupdate -format Logic /DEMO_TB/v6_gtxwizard_v1_12_top_i/v6_gtxwizard_v1_12_i/gtx3_v6_gtxwizard_v1_12_i/RXBYTEISALIGNED_OUT
 add wave -noupdate -format Logic /DEMO_TB/v6_gtxwizard_v1_12_top_i/v6_gtxwizard_v1_12_i/gtx3_v6_gtxwizard_v1_12_i/RXCOMMADET_OUT
-add wave -noupdate -format Logic /DEMO_TB/v6_gtxwizard_v1_12_top_i/v6_gtxwizard_v1_12_i/gtx3_v6_gtxwizard_v1_12_i/RXSLIDE_IN
+add wave -noupdate -format Logic /DEMO_TB/v6_gtxwizard_v1_12_top_i/v6_gtxwizard_v1_12_i/gtx3_v6_gtxwizard_v1_12_i/RXENMCOMMAALIGN_IN
+add wave -noupdate -format Logic /DEMO_TB/v6_gtxwizard_v1_12_top_i/v6_gtxwizard_v1_12_i/gtx3_v6_gtxwizard_v1_12_i/RXENPCOMMAALIGN_IN
 add wave -noupdate -divider {Receive Ports - RX Data Path interface }
 add wave -noupdate -format Literal -radix hexadecimal /DEMO_TB/v6_gtxwizard_v1_12_top_i/v6_gtxwizard_v1_12_i/gtx3_v6_gtxwizard_v1_12_i/RXDATA_OUT
 add wave -noupdate -format Logic /DEMO_TB/v6_gtxwizard_v1_12_top_i/v6_gtxwizard_v1_12_i/gtx3_v6_gtxwizard_v1_12_i/RXRECCLK_OUT

@@ -99,7 +99,8 @@
   gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {{Receive Ports - Comma Detection and Alignment}} -divider
   gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {:v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx0_v6_gtxwizard_v1_12_i:RXBYTEISALIGNED_OUT}
   gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {:v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx0_v6_gtxwizard_v1_12_i:RXCOMMADET_OUT}
-  gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {:v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx0_v6_gtxwizard_v1_12_i:RXSLIDE_IN}
+  gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {:v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx0_v6_gtxwizard_v1_12_i:RXENMCOMMAALIGN_IN}
+  gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {:v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx0_v6_gtxwizard_v1_12_i:RXENPCOMMAALIGN_IN}
   gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {{Receive Ports - RX Data Path interface}} -divider
   gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {:v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx0_v6_gtxwizard_v1_12_i:RXDATA_OUT}
   gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {:v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx0_v6_gtxwizard_v1_12_i:RXRECCLK_OUT}
@@ -139,7 +140,8 @@
   gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {{Receive Ports - Comma Detection and Alignment}} -divider
   gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {:v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx1_v6_gtxwizard_v1_12_i:RXBYTEISALIGNED_OUT}
   gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {:v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx1_v6_gtxwizard_v1_12_i:RXCOMMADET_OUT}
-  gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {:v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx1_v6_gtxwizard_v1_12_i:RXSLIDE_IN}
+  gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {:v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx1_v6_gtxwizard_v1_12_i:RXENMCOMMAALIGN_IN}
+  gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {:v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx1_v6_gtxwizard_v1_12_i:RXENPCOMMAALIGN_IN}
   gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {{Receive Ports - RX Data Path interface}} -divider
   gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {:v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx1_v6_gtxwizard_v1_12_i:RXDATA_OUT}
   gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {:v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx1_v6_gtxwizard_v1_12_i:RXRECCLK_OUT}
@@ -179,7 +181,8 @@
   gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {{Receive Ports - Comma Detection and Alignment}} -divider
   gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {:v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx2_v6_gtxwizard_v1_12_i:RXBYTEISALIGNED_OUT}
   gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {:v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx2_v6_gtxwizard_v1_12_i:RXCOMMADET_OUT}
-  gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {:v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx2_v6_gtxwizard_v1_12_i:RXSLIDE_IN}
+  gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {:v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx2_v6_gtxwizard_v1_12_i:RXENMCOMMAALIGN_IN}
+  gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {:v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx2_v6_gtxwizard_v1_12_i:RXENPCOMMAALIGN_IN}
   gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {{Receive Ports - RX Data Path interface}} -divider
   gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {:v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx2_v6_gtxwizard_v1_12_i:RXDATA_OUT}
   gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {:v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx2_v6_gtxwizard_v1_12_i:RXRECCLK_OUT}
@@ -219,7 +222,8 @@
   gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {{Receive Ports - Comma Detection and Alignment}} -divider
   gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {:v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx3_v6_gtxwizard_v1_12_i:RXBYTEISALIGNED_OUT}
   gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {:v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx3_v6_gtxwizard_v1_12_i:RXCOMMADET_OUT}
-  gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {:v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx3_v6_gtxwizard_v1_12_i:RXSLIDE_IN}
+  gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {:v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx3_v6_gtxwizard_v1_12_i:RXENMCOMMAALIGN_IN}
+  gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {:v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx3_v6_gtxwizard_v1_12_i:RXENPCOMMAALIGN_IN}
   gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {{Receive Ports - RX Data Path interface}} -divider
   gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {:v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx3_v6_gtxwizard_v1_12_i:RXDATA_OUT}
   gui_sg_addsignal -group v6_gtxwizard_v1_12_Group {:v6_gtxwizard_v1_12_top_i:v6_gtxwizard_v1_12_i:gtx3_v6_gtxwizard_v1_12_i:RXRECCLK_OUT}

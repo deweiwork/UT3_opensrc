@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Sun Mar 31 15:44:58 2019
+# Date: Fri Apr 12 03:45:50 2019
 #
 ##############################################################
 #
@@ -224,7 +224,7 @@ CSET rx_refclk_x0_y7=REFCLK1_Q1
 CSET rx_refclk_x0_y8=REFCLK1_Q2
 CSET rx_refclk_x0_y9=REFCLK1_Q2
 CSET rx_reference_clock=127.00
-CSET rx_slide_mode=PCS
+CSET rx_slide_mode=OFF
 CSET rx_termination_voltage=MGTAVTT
 CSET rxlossofsyncport=false
 CSET rxrecclk_source=AUTO
@@ -341,8 +341,8 @@ CSET use_port_cominitdet=false
 CSET use_port_comsasdet=false
 CSET use_port_comwakedet=false
 CSET use_port_drp=false
-CSET use_port_enmcommaalign=false
-CSET use_port_enpcommaalign=false
+CSET use_port_enmcommaalign=true
+CSET use_port_enpcommaalign=true
 CSET use_port_gtxtest=true
 CSET use_port_loopback=true
 CSET use_port_phystatus=false
@@ -366,7 +366,7 @@ CSET use_port_rxrate=false
 CSET use_port_rxrecclk=true
 CSET use_port_rxreset=true
 CSET use_port_rxrundisp=false
-CSET use_port_rxslide=true
+CSET use_port_rxslide=false
 CSET use_port_rxstatus=false
 CSET use_port_rxvalid=false
 CSET use_port_txbufstatus=false
@@ -408,4 +408,4 @@ CSET wideband_highpass_mix=Use_RXEQMIX_Port
 MISC pkg_timestamp=2011-04-08T05:24:23Z
 # END Extra information
 GENERATE
-# CRC: c5898212
+# CRC: e18570ea

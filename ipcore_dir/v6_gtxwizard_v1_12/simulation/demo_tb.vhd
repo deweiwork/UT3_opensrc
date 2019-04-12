@@ -224,28 +224,10 @@ begin
 
 
     begin
-        track_data_high_r <= '0';
-        wait for 61 us;
-        if (track_data_i = '1') then
-            track_data_high_r <= '1';
-        end if;
-        wait for 2 us;
-        if ((track_data_high_r = '1') and (track_data_low_r = '0')) then
-            tbprint("------- TEST PASSED -------");
-            assert false report "Simulation Stopped." severity failure;
-        else
-            tbprint("####### ERROR: TEST FAILED ! #######");
-            assert false report "Test Failed." severity failure;
-        end if;
+        wait for 63 us;
+        tbprint("------- TEST COMPLETED -------");
+        assert false report "Simulation Stopped." severity failure;
     end process;
-    
-    process
-    begin
-        track_data_low_r <= '0';
-        wait for 61 us;
-        wait until track_data_i = '0';
-        track_data_low_r <= '1';
-    end process; 
     ------------------- Instantiate an v6_gtxwizard_v1_12_top module  -----------------
 
     v6_gtxwizard_v1_12_top_i : v6_gtxwizard_v1_12_top

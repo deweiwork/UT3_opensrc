@@ -118,7 +118,8 @@ port
     --------------- Receive Ports - Comma Detection and Alignment --------------
     GTX0_RXBYTEISALIGNED_OUT                : out  std_logic;
     GTX0_RXCOMMADET_OUT                     : out  std_logic;
-    GTX0_RXSLIDE_IN                         : in   std_logic;
+    GTX0_RXENMCOMMAALIGN_IN                 : in   std_logic;
+    GTX0_RXENPCOMMAALIGN_IN                 : in   std_logic;
     ------------------- Receive Ports - RX Data Path interface -----------------
     GTX0_RXDATA_OUT                         : out  std_logic_vector(19 downto 0);
     GTX0_RXRECCLK_OUT                       : out  std_logic;
@@ -163,7 +164,8 @@ port
     --------------- Receive Ports - Comma Detection and Alignment --------------
     GTX1_RXBYTEISALIGNED_OUT                : out  std_logic;
     GTX1_RXCOMMADET_OUT                     : out  std_logic;
-    GTX1_RXSLIDE_IN                         : in   std_logic;
+    GTX1_RXENMCOMMAALIGN_IN                 : in   std_logic;
+    GTX1_RXENPCOMMAALIGN_IN                 : in   std_logic;
     ------------------- Receive Ports - RX Data Path interface -----------------
     GTX1_RXDATA_OUT                         : out  std_logic_vector(19 downto 0);
     GTX1_RXRECCLK_OUT                       : out  std_logic;
@@ -208,7 +210,8 @@ port
     --------------- Receive Ports - Comma Detection and Alignment --------------
     GTX2_RXBYTEISALIGNED_OUT                : out  std_logic;
     GTX2_RXCOMMADET_OUT                     : out  std_logic;
-    GTX2_RXSLIDE_IN                         : in   std_logic;
+    GTX2_RXENMCOMMAALIGN_IN                 : in   std_logic;
+    GTX2_RXENPCOMMAALIGN_IN                 : in   std_logic;
     ------------------- Receive Ports - RX Data Path interface -----------------
     GTX2_RXDATA_OUT                         : out  std_logic_vector(19 downto 0);
     GTX2_RXRECCLK_OUT                       : out  std_logic;
@@ -253,7 +256,8 @@ port
     --------------- Receive Ports - Comma Detection and Alignment --------------
     GTX3_RXBYTEISALIGNED_OUT                : out  std_logic;
     GTX3_RXCOMMADET_OUT                     : out  std_logic;
-    GTX3_RXSLIDE_IN                         : in   std_logic;
+    GTX3_RXENMCOMMAALIGN_IN                 : in   std_logic;
+    GTX3_RXENPCOMMAALIGN_IN                 : in   std_logic;
     ------------------- Receive Ports - RX Data Path interface -----------------
     GTX3_RXDATA_OUT                         : out  std_logic_vector(19 downto 0);
     GTX3_RXRECCLK_OUT                       : out  std_logic;
@@ -494,7 +498,6 @@ port
     
     -- Track Data
     TRACK_DATA               : out std_logic;
-    RX_SLIDE                 : out std_logic;
  
     -- System Interface
     USER_CLK                 : in std_logic;
@@ -619,7 +622,8 @@ attribute syn_noprune of rx_phase_align_fifo   : component is TRUE;
     --------------- Receive Ports - Comma Detection and Alignment --------------
     signal  gtx0_rxbyteisaligned_i          : std_logic;
     signal  gtx0_rxcommadet_i               : std_logic;
-    signal  gtx0_rxslide_i                  : std_logic;
+    signal  gtx0_rxenmcommaalign_i          : std_logic;
+    signal  gtx0_rxenpcommaalign_i          : std_logic;
     ------------------- Receive Ports - RX Data Path interface -----------------
     signal  gtx0_rxdata_i                   : std_logic_vector(19 downto 0);
     signal  gtx0_rxrecclk_i                 : std_logic;
@@ -656,7 +660,8 @@ attribute syn_noprune of rx_phase_align_fifo   : component is TRUE;
     --------------- Receive Ports - Comma Detection and Alignment --------------
     signal  gtx1_rxbyteisaligned_i          : std_logic;
     signal  gtx1_rxcommadet_i               : std_logic;
-    signal  gtx1_rxslide_i                  : std_logic;
+    signal  gtx1_rxenmcommaalign_i          : std_logic;
+    signal  gtx1_rxenpcommaalign_i          : std_logic;
     ------------------- Receive Ports - RX Data Path interface -----------------
     signal  gtx1_rxdata_i                   : std_logic_vector(19 downto 0);
     signal  gtx1_rxrecclk_i                 : std_logic;
@@ -693,7 +698,8 @@ attribute syn_noprune of rx_phase_align_fifo   : component is TRUE;
     --------------- Receive Ports - Comma Detection and Alignment --------------
     signal  gtx2_rxbyteisaligned_i          : std_logic;
     signal  gtx2_rxcommadet_i               : std_logic;
-    signal  gtx2_rxslide_i                  : std_logic;
+    signal  gtx2_rxenmcommaalign_i          : std_logic;
+    signal  gtx2_rxenpcommaalign_i          : std_logic;
     ------------------- Receive Ports - RX Data Path interface -----------------
     signal  gtx2_rxdata_i                   : std_logic_vector(19 downto 0);
     signal  gtx2_rxrecclk_i                 : std_logic;
@@ -730,7 +736,8 @@ attribute syn_noprune of rx_phase_align_fifo   : component is TRUE;
     --------------- Receive Ports - Comma Detection and Alignment --------------
     signal  gtx3_rxbyteisaligned_i          : std_logic;
     signal  gtx3_rxcommadet_i               : std_logic;
-    signal  gtx3_rxslide_i                  : std_logic;
+    signal  gtx3_rxenmcommaalign_i          : std_logic;
+    signal  gtx3_rxenpcommaalign_i          : std_logic;
     ------------------- Receive Ports - RX Data Path interface -----------------
     signal  gtx3_rxdata_i                   : std_logic_vector(19 downto 0);
     signal  gtx3_rxrecclk_i                 : std_logic;
@@ -1079,7 +1086,8 @@ begin
         --------------- Receive Ports - Comma Detection and Alignment --------------
         GTX0_RXBYTEISALIGNED_OUT        =>      gtx0_rxbyteisaligned_i,
         GTX0_RXCOMMADET_OUT             =>      gtx0_rxcommadet_i,
-        GTX0_RXSLIDE_IN                 =>      gtx0_rxslide_i,
+        GTX0_RXENMCOMMAALIGN_IN         =>      gtx0_rxenmcommaalign_i,
+        GTX0_RXENPCOMMAALIGN_IN         =>      gtx0_rxenpcommaalign_i,
         ------------------- Receive Ports - RX Data Path interface -----------------
         GTX0_RXDATA_OUT                 =>      gtx0_rxdata_i,
         GTX0_RXRECCLK_OUT               =>      gtx0_rxrecclk_i,
@@ -1127,7 +1135,8 @@ begin
         --------------- Receive Ports - Comma Detection and Alignment --------------
         GTX1_RXBYTEISALIGNED_OUT        =>      gtx1_rxbyteisaligned_i,
         GTX1_RXCOMMADET_OUT             =>      gtx1_rxcommadet_i,
-        GTX1_RXSLIDE_IN                 =>      gtx1_rxslide_i,
+        GTX1_RXENMCOMMAALIGN_IN         =>      gtx1_rxenmcommaalign_i,
+        GTX1_RXENPCOMMAALIGN_IN         =>      gtx1_rxenpcommaalign_i,
         ------------------- Receive Ports - RX Data Path interface -----------------
         GTX1_RXDATA_OUT                 =>      gtx1_rxdata_i,
         GTX1_RXRECCLK_OUT               =>      gtx1_rxrecclk_i,
@@ -1175,7 +1184,8 @@ begin
         --------------- Receive Ports - Comma Detection and Alignment --------------
         GTX2_RXBYTEISALIGNED_OUT        =>      gtx2_rxbyteisaligned_i,
         GTX2_RXCOMMADET_OUT             =>      gtx2_rxcommadet_i,
-        GTX2_RXSLIDE_IN                 =>      gtx2_rxslide_i,
+        GTX2_RXENMCOMMAALIGN_IN         =>      gtx2_rxenmcommaalign_i,
+        GTX2_RXENPCOMMAALIGN_IN         =>      gtx2_rxenpcommaalign_i,
         ------------------- Receive Ports - RX Data Path interface -----------------
         GTX2_RXDATA_OUT                 =>      gtx2_rxdata_i,
         GTX2_RXRECCLK_OUT               =>      gtx2_rxrecclk_i,
@@ -1223,7 +1233,8 @@ begin
         --------------- Receive Ports - Comma Detection and Alignment --------------
         GTX3_RXBYTEISALIGNED_OUT        =>      gtx3_rxbyteisaligned_i,
         GTX3_RXCOMMADET_OUT             =>      gtx3_rxcommadet_i,
-        GTX3_RXSLIDE_IN                 =>      gtx3_rxslide_i,
+        GTX3_RXENMCOMMAALIGN_IN         =>      gtx3_rxenmcommaalign_i,
+        GTX3_RXENPCOMMAALIGN_IN         =>      gtx3_rxenpcommaalign_i,
         ------------------- Receive Ports - RX Data Path interface -----------------
         GTX3_RXDATA_OUT                 =>      gtx3_rxdata_i,
         GTX3_RXRECCLK_OUT               =>      gtx3_rxrecclk_i,
@@ -1914,9 +1925,8 @@ begin
     (
         -- MGT Interface
         RX_DATA                         =>      gtx0_rxdata_i,
-        RX_ENMCOMMA_ALIGN               =>      open,
-        RX_ENPCOMMA_ALIGN               =>      open,
-        RX_SLIDE                        =>      gtx0_rxslide_i,
+        RX_ENMCOMMA_ALIGN               =>      gtx0_rxenmcommaalign_i,
+        RX_ENPCOMMA_ALIGN               =>      gtx0_rxenpcommaalign_i,
         -- System Interface
         USER_CLK                        =>      gtx0_rxusrclk2_i,
         SYSTEM_RESET                    =>      gtx0_rx_system_reset_c,
@@ -2017,9 +2027,8 @@ begin
     (
         -- MGT Interface
         RX_DATA                         =>      gtx1_rxdata_i,
-        RX_ENMCOMMA_ALIGN               =>      open,
-        RX_ENPCOMMA_ALIGN               =>      open,
-        RX_SLIDE                        =>      gtx1_rxslide_i,
+        RX_ENMCOMMA_ALIGN               =>      gtx1_rxenmcommaalign_i,
+        RX_ENPCOMMA_ALIGN               =>      gtx1_rxenpcommaalign_i,
         -- System Interface
         USER_CLK                        =>      gtx1_rxusrclk2_i,
         SYSTEM_RESET                    =>      gtx1_rx_system_reset_c,
@@ -2120,9 +2129,8 @@ begin
     (
         -- MGT Interface
         RX_DATA                         =>      gtx2_rxdata_i,
-        RX_ENMCOMMA_ALIGN               =>      open,
-        RX_ENPCOMMA_ALIGN               =>      open,
-        RX_SLIDE                        =>      gtx2_rxslide_i,
+        RX_ENMCOMMA_ALIGN               =>      gtx2_rxenmcommaalign_i,
+        RX_ENPCOMMA_ALIGN               =>      gtx2_rxenpcommaalign_i,
         -- System Interface
         USER_CLK                        =>      gtx2_rxusrclk2_i,
         SYSTEM_RESET                    =>      gtx2_rx_system_reset_c,
@@ -2223,9 +2231,8 @@ begin
     (
         -- MGT Interface
         RX_DATA                         =>      gtx3_rxdata_i,
-        RX_ENMCOMMA_ALIGN               =>      open,
-        RX_ENPCOMMA_ALIGN               =>      open,
-        RX_SLIDE                        =>      gtx3_rxslide_i,
+        RX_ENMCOMMA_ALIGN               =>      gtx3_rxenmcommaalign_i,
+        RX_ENPCOMMA_ALIGN               =>      gtx3_rxenpcommaalign_i,
         -- System Interface
         USER_CLK                        =>      gtx3_rxusrclk2_i,
         SYSTEM_RESET                    =>      gtx3_rx_system_reset_c,

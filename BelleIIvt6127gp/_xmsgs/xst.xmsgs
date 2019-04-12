@@ -5,40 +5,40 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="685" delta="old" >"C:\Users\B1409_Server\Desktop\UT3_opensrc\src\frame_gen.vhd" Line 9: Overwriting existing primary unit <arg fmt="%s" index="1">frame_gen</arg>
+<msg type="warning" file="HDLCompiler" num="685" delta="old" >"C:\Users\curlywei\Desktop\UT3_opensrc\src\frame_gen.vhd" Line 9: Overwriting existing primary unit <arg fmt="%s" index="1">frame_gen</arg>
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="685" delta="old" >"C:\Users\B1409_Server\Desktop\UT3_opensrc\src\frame_check.vhd" Line 9: Overwriting existing primary unit <arg fmt="%s" index="1">frame_check</arg>
+<msg type="warning" file="HDLCompiler" num="685" delta="old" >"C:\Users\curlywei\Desktop\UT3_opensrc\src\frame_check.vhd" Line 9: Overwriting existing primary unit <arg fmt="%s" index="1">frame_check</arg>
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="946" delta="old" >"C:\Users\B1409_Server\Desktop\UT3_opensrc\src\ch_sync_buf_4ch\ch_sync_buffer_4ch.vhd" Line 64: Actual for formal port <arg fmt="%s" index="1">rst_n</arg> is neither a static name nor a globally static expression
+<msg type="warning" file="HDLCompiler" num="946" delta="old" >"C:\Users\curlywei\Desktop\UT3_opensrc\src\ch_sync_buf_4ch\ch_sync_buffer_4ch.vhd" Line 64: Actual for formal port <arg fmt="%s" index="1">rst_n</arg> is neither a static name nor a globally static expression
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="946" delta="old" >"C:\Users\B1409_Server\Desktop\UT3_opensrc\src\ch_sync_buf_4ch\ch_sync_buffer_4ch.vhd" Line 115: Actual for formal port <arg fmt="%s" index="1">sel</arg> is neither a static name nor a globally static expression
+<msg type="warning" file="HDLCompiler" num="946" delta="old" >"C:\Users\curlywei\Desktop\UT3_opensrc\src\ch_sync_buf_4ch\ch_sync_buffer_4ch.vhd" Line 115: Actual for formal port <arg fmt="%s" index="1">sel</arg> is neither a static name nor a globally static expression
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="946" delta="old" >"C:\Users\B1409_Server\Desktop\UT3_opensrc\src\XCVR_8B10B_interconnect.vhd" Line 774: Actual for formal port <arg fmt="%s" index="1">trig4</arg> is neither a static name nor a globally static expression
+<msg type="warning" file="HDLCompiler" num="946" delta="old" >"C:\Users\curlywei\Desktop\UT3_opensrc\src\XCVR_8B10B_interconnect.vhd" Line 782: Actual for formal port <arg fmt="%s" index="1">trig4</arg> is neither a static name nor a globally static expression
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="946" delta="old" >"C:\Users\B1409_Server\Desktop\UT3_opensrc\src\XCVR_8B10B_interconnect.vhd" Line 775: Actual for formal port <arg fmt="%s" index="1">trig5</arg> is neither a static name nor a globally static expression
+<msg type="warning" file="HDLCompiler" num="946" delta="old" >"C:\Users\curlywei\Desktop\UT3_opensrc\src\XCVR_8B10B_interconnect.vhd" Line 783: Actual for formal port <arg fmt="%s" index="1">trig5</arg> is neither a static name nor a globally static expression
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="946" delta="old" >"C:\Users\B1409_Server\Desktop\UT3_opensrc\src\XCVR_8B10B_interconnect.vhd" Line 780: Actual for formal port <arg fmt="%s" index="1">trig10</arg> is neither a static name nor a globally static expression
+<msg type="warning" file="HDLCompiler" num="946" delta="old" >"C:\Users\curlywei\Desktop\UT3_opensrc\src\XCVR_8B10B_interconnect.vhd" Line 788: Actual for formal port <arg fmt="%s" index="1">trig10</arg> is neither a static name nor a globally static expression
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="946" delta="old" >"C:\Users\B1409_Server\Desktop\UT3_opensrc\src\XCVR_8B10B_interconnect.vhd" Line 790: Actual for formal port <arg fmt="%s" index="1">trig4</arg> is neither a static name nor a globally static expression
+<msg type="warning" file="HDLCompiler" num="946" delta="old" >"C:\Users\curlywei\Desktop\UT3_opensrc\src\XCVR_8B10B_interconnect.vhd" Line 798: Actual for formal port <arg fmt="%s" index="1">trig4</arg> is neither a static name nor a globally static expression
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="946" delta="old" >"C:\Users\B1409_Server\Desktop\UT3_opensrc\src\XCVR_8B10B_interconnect.vhd" Line 791: Actual for formal port <arg fmt="%s" index="1">trig5</arg> is neither a static name nor a globally static expression
+<msg type="warning" file="HDLCompiler" num="946" delta="old" >"C:\Users\curlywei\Desktop\UT3_opensrc\src\XCVR_8B10B_interconnect.vhd" Line 799: Actual for formal port <arg fmt="%s" index="1">trig5</arg> is neither a static name nor a globally static expression
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\B1409_Server\Desktop\UT3_opensrc\ipcore_dir\v6_gtxwizard_v1_12.vhd" Line 359: Assignment to <arg fmt="%s" index="1">tied_to_vcc_i</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\curlywei\Desktop\UT3_opensrc\ipcore_dir\v6_gtxwizard_v1_12.vhd" Line 364: Assignment to <arg fmt="%s" index="1">tied_to_vcc_i</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\B1409_Server\Desktop\UT3_opensrc\src\openscr8B10B\decode_v.v" Line 136: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\curlywei\Desktop\UT3_opensrc\src\openscr8B10B\decode_v.v" Line 136: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\B1409_Server\Desktop\UT3_opensrc\src\openscr8B10B\decode_v.v" Line 156: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\curlywei\Desktop\UT3_opensrc\src\openscr8B10B\decode_v.v" Line 156: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">TX_para_external_ch&lt;3&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -53,16 +53,16 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">TX_para_external_ch&lt;0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\UT3_opensrc\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">635</arg>: Output port &lt;<arg fmt="%s" index="3">gp_sync_can_start</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">generate_traffic_loop[0].traffic</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\curlywei\Desktop\UT3_opensrc\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">643</arg>: Output port &lt;<arg fmt="%s" index="3">gp_sync_can_start</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">generate_traffic_loop[0].traffic</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\UT3_opensrc\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">635</arg>: Output port &lt;<arg fmt="%s" index="3">gp_sync_can_start</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">generate_traffic_loop[1].traffic</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\curlywei\Desktop\UT3_opensrc\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">643</arg>: Output port &lt;<arg fmt="%s" index="3">gp_sync_can_start</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">generate_traffic_loop[1].traffic</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\UT3_opensrc\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">635</arg>: Output port &lt;<arg fmt="%s" index="3">gp_sync_can_start</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">generate_traffic_loop[2].traffic</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\curlywei\Desktop\UT3_opensrc\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">643</arg>: Output port &lt;<arg fmt="%s" index="3">gp_sync_can_start</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">generate_traffic_loop[2].traffic</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\UT3_opensrc\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">635</arg>: Output port &lt;<arg fmt="%s" index="3">gp_sync_can_start</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">generate_traffic_loop[3].traffic</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\curlywei\Desktop\UT3_opensrc\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">643</arg>: Output port &lt;<arg fmt="%s" index="3">gp_sync_can_start</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">generate_traffic_loop[3].traffic</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">RX_para_external_ch&lt;3&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
@@ -89,16 +89,16 @@
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">rx_traffic_ready_ext_ch</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\UT3_opensrc\ipcore_dir\v6_gtxwizard_v1_12.vhd</arg>&quot; line <arg fmt="%s" index="2">376</arg>: Output port &lt;<arg fmt="%s" index="3">TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gtx0_v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\curlywei\Desktop\UT3_opensrc\ipcore_dir\v6_gtxwizard_v1_12.vhd</arg>&quot; line <arg fmt="%s" index="2">381</arg>: Output port &lt;<arg fmt="%s" index="3">TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gtx0_v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\UT3_opensrc\ipcore_dir\v6_gtxwizard_v1_12.vhd</arg>&quot; line <arg fmt="%s" index="2">439</arg>: Output port &lt;<arg fmt="%s" index="3">TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gtx1_v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\curlywei\Desktop\UT3_opensrc\ipcore_dir\v6_gtxwizard_v1_12.vhd</arg>&quot; line <arg fmt="%s" index="2">445</arg>: Output port &lt;<arg fmt="%s" index="3">TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gtx1_v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\UT3_opensrc\ipcore_dir\v6_gtxwizard_v1_12.vhd</arg>&quot; line <arg fmt="%s" index="2">502</arg>: Output port &lt;<arg fmt="%s" index="3">TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gtx2_v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\curlywei\Desktop\UT3_opensrc\ipcore_dir\v6_gtxwizard_v1_12.vhd</arg>&quot; line <arg fmt="%s" index="2">509</arg>: Output port &lt;<arg fmt="%s" index="3">TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gtx2_v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\UT3_opensrc\ipcore_dir\v6_gtxwizard_v1_12.vhd</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gtx3_v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\curlywei\Desktop\UT3_opensrc\ipcore_dir\v6_gtxwizard_v1_12.vhd</arg>&quot; line <arg fmt="%s" index="2">573</arg>: Output port &lt;<arg fmt="%s" index="3">TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gtx3_v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">RX_D</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -128,16 +128,16 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">rx_pattern_detected&lt;0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\UT3_opensrc\src\openscr8B10B\encoder_16b20b.vhd</arg>&quot; line <arg fmt="%s" index="2">38</arg>: Output port &lt;<arg fmt="%s" index="3">dispout</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">encoder_0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\curlywei\Desktop\UT3_opensrc\src\openscr8B10B\encoder_16b20b.vhd</arg>&quot; line <arg fmt="%s" index="2">38</arg>: Output port &lt;<arg fmt="%s" index="3">dispout</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">encoder_0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\UT3_opensrc\src\openscr8B10B\encoder_16b20b.vhd</arg>&quot; line <arg fmt="%s" index="2">46</arg>: Output port &lt;<arg fmt="%s" index="3">dispout</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">encoder_1</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\curlywei\Desktop\UT3_opensrc\src\openscr8B10B\encoder_16b20b.vhd</arg>&quot; line <arg fmt="%s" index="2">46</arg>: Output port &lt;<arg fmt="%s" index="3">dispout</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">encoder_1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\UT3_opensrc\src\openscr8B10B\decoder_16b20b.vhd</arg>&quot; line <arg fmt="%s" index="2">42</arg>: Output port &lt;<arg fmt="%s" index="3">dispout</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">decoder_0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\curlywei\Desktop\UT3_opensrc\src\openscr8B10B\decoder_16b20b.vhd</arg>&quot; line <arg fmt="%s" index="2">42</arg>: Output port &lt;<arg fmt="%s" index="3">dispout</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">decoder_0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\UT3_opensrc\src\openscr8B10B\decoder_16b20b.vhd</arg>&quot; line <arg fmt="%s" index="2">53</arg>: Output port &lt;<arg fmt="%s" index="3">dispout</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">decoder_1</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\curlywei\Desktop\UT3_opensrc\src\openscr8B10B\decoder_16b20b.vhd</arg>&quot; line <arg fmt="%s" index="2">53</arg>: Output port &lt;<arg fmt="%s" index="3">dispout</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">decoder_1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="info" file="Xst" num="1901" delta="old" >Instance <arg fmt="%s" index="1">U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36</arg> in unit <arg fmt="%s" index="2">U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36</arg> of type <arg fmt="%s" index="3">RAMB36</arg> has been replaced by <arg fmt="%s" index="4">RAMB36E1</arg>

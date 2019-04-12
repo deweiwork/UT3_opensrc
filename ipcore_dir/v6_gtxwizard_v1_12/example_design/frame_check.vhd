@@ -172,7 +172,6 @@ port
     
     -- Track Data
     TRACK_DATA               : out std_logic;
-    RX_SLIDE                 : out std_logic;
    
     -- System Interface
     USER_CLK                 : in std_logic;       
@@ -216,12 +215,6 @@ architecture RTL of FRAME_CHECK is
     signal  track_data_r4               :   std_logic;
     signal  sel                         :   std_logic_vector(1 downto 0);
     signal  bram_data_r                 :   std_logic_vector(31 downto 0);
-    signal  idle_slip_r                 :   std_logic;
-    signal  slip_assert_r               :   std_logic;
-    signal  wait_state_r                :   std_logic;
-    signal  bit_align_r                 :   std_logic;
-    signal  wait_before_slip_r          :   std_logic_vector(8 downto 0); 
-    signal  wait_before_init_r          :   std_logic_vector(8 downto 0);  
          
  
 --*********************************Wire Declarations***************************
@@ -236,14 +229,6 @@ architecture RTL of FRAME_CHECK is
     signal  next_data_error_detected_c  :   std_logic;
     signal  next_track_data_c           :   std_logic;
     signal  start_of_packet_detected_c  :   std_logic;
-    signal  rxdata_or                   :   std_logic;
-    signal  rxdata_r_or                 :   std_logic;
-    signal  rxdata_r2_or                :   std_logic;
-    signal  rxdata_r3_or                :   std_logic;
-    signal  count_slip_complete_c       :   std_logic;
-    signal  next_idle_slip_c            :   std_logic;
-    signal  next_slip_assert_c          :   std_logic;
-    signal  wait_state_c                :   std_logic;
     signal  rx_data_aligned             :   std_logic_vector((RX_DATA_WIDTH-1) downto 0);
     signal  rx_data_has_start_char_c    :   std_logic;
     signal  rx_data_matches_bram_c      :   std_logic;
@@ -382,140 +367,6 @@ datapath_width_8_or_10: if ((RX_DATA_WIDTH=8) or (RX_DATA_WIDTH=10)) generate
 end generate datapath_width_8_or_10;
 
 
-   --______________ Code for Bit Slipping Logic______________
-
-    process(rx_data_r)
-    variable or_rxdata_r_var : std_logic;
-    variable i             : std_logic;
-    begin
-        or_rxdata_r_var := '0';
-        bit_wise_rxdata_r_or : for  i in 0 to (RX_DATA_WIDTH-1) loop
-            or_rxdata_r_var :=  or_rxdata_r_var or rx_data_r(i);
-        end loop;
-        rxdata_r_or <= or_rxdata_r_var;
-    end process;
-
-    process(rx_data_r2)
-    variable or_rxdata_r2_var : std_logic;
-    variable i             : std_logic;
-    begin
-        or_rxdata_r2_var := '0';
-        bit_wise_rxdata_r2_or : for  i in 0 to (RX_DATA_WIDTH-1) loop
-            or_rxdata_r2_var :=  or_rxdata_r2_var or rx_data_r2(i);
-        end loop;
-        rxdata_r2_or <= or_rxdata_r2_var;
-    end process;
-
-    process(rx_data_r3)
-    variable or_rxdata_r3_var : std_logic;
-    variable i             : std_logic;
-    begin
-        or_rxdata_r3_var := '0';
-        bit_wise_rxdata_r3_or : for  i in 0 to (RX_DATA_WIDTH-1) loop
-            or_rxdata_r3_var :=  or_rxdata_r3_var or rx_data_r3(i);
-        end loop;
-        rxdata_r3_or <= or_rxdata_r3_var;
-    end process;
-
-    rxdata_or <= rxdata_r_or or rxdata_r2_or or rxdata_r3_or;
-
-    -- State registers
-    process( USER_CLK )
-    begin
-        if(USER_CLK'event and USER_CLK = '1') then
-            if( (SYSTEM_RESET = '1') or (wait_before_init_r(8) = '0') or (rxdata_or = '0') )then
-                idle_slip_r            <=  '1' after DLY;
-                slip_assert_r          <=  '0' after DLY;
-                wait_state_r           <=  '0' after DLY;
-            else
-                idle_slip_r            <=  next_idle_slip_c   after DLY;
-                slip_assert_r          <=  next_slip_assert_c after DLY;
-                wait_state_r           <=  wait_state_c       after DLY;
-            end if;
-        end if;
-    end process;
- 
-    -- Next state logic
-    next_idle_slip_c           <=   (idle_slip_r and bit_align_r) or (wait_state_r and count_slip_complete_c) ;     
-
-    next_slip_assert_c         <=   (idle_slip_r and (not bit_align_r));
-
-    wait_state_c               <=   (slip_assert_r) or (wait_state_r and (not count_slip_complete_c)); 
-
-
-    --_______ Counter for waiting clock cycles after RXSLIDE________
-    process( USER_CLK )
-    begin
-        if(USER_CLK'event and USER_CLK = '1') then
-            if(wait_state_r = '0') then
-               wait_before_slip_r  <=  "000000000" after DLY;
-            else
-               wait_before_slip_r  <=  wait_before_slip_r + '1' after DLY;
-            end if;
-        end if;
-    end process;
-
-    --_______ Counter for waiting clock cycles before starting RXSLIDE operation________
-    --_______ Wait for 64 clock cycles to see if the RXDATA is already byte aligned. If not, start RXSLIDE operation
-    process( USER_CLK )
-    begin
-        if(USER_CLK'event and USER_CLK = '1') then
-            if(SYSTEM_RESET = '1') then
-               wait_before_init_r  <=  "000000000" after DLY;
-            elsif(wait_before_init_r(8) = '0') then 
-               wait_before_init_r  <=  wait_before_init_r + '1' after DLY;
-            end if;
-        end if;
-    end process;
-
-    count_slip_complete_c <= wait_before_slip_r(8);
-
-    process( USER_CLK )
-    begin
-        if(USER_CLK'event and USER_CLK = '1') then
-            if(SYSTEM_RESET = '1') then
-                  bit_align_r  <=  '0'  after DLY;
-            else 
-                if( ((rx_data_r(9 downto 0) & rx_data_r2(19 downto 10)) = START_OF_PACKET_CHAR) 
-                                                 or (rx_data_r(19 downto 0) = START_OF_PACKET_CHAR) ) then
-                     bit_align_r   <=   '1'  after DLY;
-                
-                end if;
-            end if;
-        end if;
-    end process;
-    process( USER_CLK )
-    begin
-        if(USER_CLK'event and USER_CLK = '1') then
-            if(SYSTEM_RESET = '1') then
-                  sel  <=  "00"  after DLY;
-            else 
-                if((rx_data_r(9 downto 0) & rx_data_r2(19 downto 10)) = START_OF_PACKET_CHAR) then
-                     sel   <=   "01"  after DLY;
-                elsif(rx_data_r(19 downto 0) = START_OF_PACKET_CHAR) then
-                     sel   <=   "00"  after DLY;
-                end if;
-            end if;
-        end if;
-    end process;
-
-    rx_data_has_start_char_c <= '1' when (rx_data_aligned = START_OF_PACKET_CHAR) 
-                                else '0';
-
-    process( USER_CLK )
-    begin
-        if(USER_CLK'event and USER_CLK = '1') then
-            if(SYSTEM_RESET = '1') then
-                  rx_data_r3  <=  (others=>'0')  after DLY;
-            else 
-                if(sel = "01") then
-                   rx_data_r3  <=  (rx_data_r(9 downto 0) & rx_data_r2(19 downto 10)) after DLY;
-                else
-                   rx_data_r3  <=  rx_data_r2;
-                end if;
-            end if;
-        end if;
-    end process;
 
    
 
@@ -524,7 +375,6 @@ end generate datapath_width_8_or_10;
 
     TRACK_DATA      <=  track_data_r;    
 
-    RX_SLIDE        <=  slip_assert_r;
 
     -- Drive the enamcommaalign port of the mgt for alignment
     process( USER_CLK )

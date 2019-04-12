@@ -1,6 +1,6 @@
 #ChipScope Pro Analyzer Project File, Version 3.0
 #Thu Jul 27 15:56:09 IST 2006
-device.1.configFileDir=C:/Users/dzwei-home/Desktop/ut3extGP/ipcore_dir/v6_gtxwizard_v1_12/implement/
+device.1.configFileDir=C:/Users/curlywei/Desktop/UT3_opensrc/ipcore_dir/v6_gtxwizard_v1_12/implement/
 device.1.configFilename=v6_gtxwizard_v1_12_top.bit
 deviceChain.deviceName0=System_ACE
 deviceChain.deviceName1=XC6VHX380T

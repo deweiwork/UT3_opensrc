@@ -140,197 +140,201 @@ architecture XCVR_8B10B_interconnect_Top of XCVR_8B10B_interconnect is
     signal rx_Para_data_from_sync_buf_ch        : para_data_men;
     signal elastic_buf_overflow                 : std_logic;
     signal elastic_buf_sync_done                : std_logic;
-component v6_gtxwizard_v1_12 
-generic
-(
-    -- Simulation attributes
-    WRAPPER_SIM_GTXRESET_SPEEDUP    : integer   := 0 -- Set to 1 to speed up sim reset
-);
-port
-(
+    component v6_gtxwizard_v1_12 
+    generic
+    (
+        -- Simulation attributes
+        WRAPPER_SIM_GTXRESET_SPEEDUP    : integer   := 0 -- Set to 1 to speed up sim reset
+    );
+    port
+    (
+        
+        --_________________________________________________________________________
+        --_________________________________________________________________________
+        --GTX0  (X0_Y0)
     
-    --_________________________________________________________________________
-    --_________________________________________________________________________
-    --GTX0  (X0_Y0)
-
-    ------------------------ Loopback and Powerdown Ports ----------------------
-    GTX0_LOOPBACK_IN                        : in   std_logic_vector(2 downto 0);
-    --------------- Receive Ports - Comma Detection and Alignment --------------
-    GTX0_RXBYTEISALIGNED_OUT                : out  std_logic;
-    GTX0_RXCOMMADET_OUT                     : out  std_logic;
-    GTX0_RXSLIDE_IN                         : in   std_logic;
-    ------------------- Receive Ports - RX Data Path interface -----------------
-    GTX0_RXDATA_OUT                         : out  std_logic_vector(19 downto 0);
-    GTX0_RXRECCLK_OUT                       : out  std_logic;
-    GTX0_RXRESET_IN                         : in   std_logic;
-    GTX0_RXUSRCLK2_IN                       : in   std_logic;
-    ------- Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR ------
-    GTX0_RXEQMIX_IN                         : in   std_logic_vector(2 downto 0);
-    GTX0_RXN_IN                             : in   std_logic;
-    GTX0_RXP_IN                             : in   std_logic;
-    ------------------------ Receive Ports - RX PLL Ports ----------------------
-    GTX0_GTXRXRESET_IN                      : in   std_logic;
-    GTX0_MGTREFCLKRX_IN                     : in   std_logic;
-    GTX0_PLLRXRESET_IN                      : in   std_logic;
-    GTX0_RXPLLLKDET_OUT                     : out  std_logic;
-    GTX0_RXRESETDONE_OUT                    : out  std_logic;
-    ------------------------- Transmit Ports - GTX Ports -----------------------
-    GTX0_GTXTEST_IN                         : in   std_logic_vector(12 downto 0);
-    ------------------ Transmit Ports - TX Data Path interface -----------------
-    GTX0_TXDATA_IN                          : in   std_logic_vector(19 downto 0);
-    GTX0_TXOUTCLK_OUT                       : out  std_logic;
-    GTX0_TXRESET_IN                         : in   std_logic;
-    GTX0_TXUSRCLK2_IN                       : in   std_logic;
-    ---------------- Transmit Ports - TX Driver and OOB signaling --------------
-    GTX0_TXDIFFCTRL_IN                      : in   std_logic_vector(3 downto 0);
-    GTX0_TXN_OUT                            : out  std_logic;
-    GTX0_TXP_OUT                            : out  std_logic;
-    GTX0_TXPOSTEMPHASIS_IN                  : in   std_logic_vector(4 downto 0);
-    --------------- Transmit Ports - TX Driver and OOB signalling --------------
-    GTX0_TXPREEMPHASIS_IN                   : in   std_logic_vector(3 downto 0);
-    ----------------------- Transmit Ports - TX PLL Ports ----------------------
-    GTX0_GTXTXRESET_IN                      : in   std_logic;
-    GTX0_TXRESETDONE_OUT                    : out  std_logic;
-
-
+        ------------------------ Loopback and Powerdown Ports ----------------------
+        GTX0_LOOPBACK_IN                        : in   std_logic_vector(2 downto 0);
+        --------------- Receive Ports - Comma Detection and Alignment --------------
+        GTX0_RXBYTEISALIGNED_OUT                : out  std_logic;
+        GTX0_RXCOMMADET_OUT                     : out  std_logic;
+        GTX0_RXENMCOMMAALIGN_IN                 : in   std_logic;
+        GTX0_RXENPCOMMAALIGN_IN                 : in   std_logic;
+        ------------------- Receive Ports - RX Data Path interface -----------------
+        GTX0_RXDATA_OUT                         : out  std_logic_vector(19 downto 0);
+        GTX0_RXRECCLK_OUT                       : out  std_logic;
+        GTX0_RXRESET_IN                         : in   std_logic;
+        GTX0_RXUSRCLK2_IN                       : in   std_logic;
+        ------- Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR ------
+        GTX0_RXEQMIX_IN                         : in   std_logic_vector(2 downto 0);
+        GTX0_RXN_IN                             : in   std_logic;
+        GTX0_RXP_IN                             : in   std_logic;
+        ------------------------ Receive Ports - RX PLL Ports ----------------------
+        GTX0_GTXRXRESET_IN                      : in   std_logic;
+        GTX0_MGTREFCLKRX_IN                     : in   std_logic;
+        GTX0_PLLRXRESET_IN                      : in   std_logic;
+        GTX0_RXPLLLKDET_OUT                     : out  std_logic;
+        GTX0_RXRESETDONE_OUT                    : out  std_logic;
+        ------------------------- Transmit Ports - GTX Ports -----------------------
+        GTX0_GTXTEST_IN                         : in   std_logic_vector(12 downto 0);
+        ------------------ Transmit Ports - TX Data Path interface -----------------
+        GTX0_TXDATA_IN                          : in   std_logic_vector(19 downto 0);
+        GTX0_TXOUTCLK_OUT                       : out  std_logic;
+        GTX0_TXRESET_IN                         : in   std_logic;
+        GTX0_TXUSRCLK2_IN                       : in   std_logic;
+        ---------------- Transmit Ports - TX Driver and OOB signaling --------------
+        GTX0_TXDIFFCTRL_IN                      : in   std_logic_vector(3 downto 0);
+        GTX0_TXN_OUT                            : out  std_logic;
+        GTX0_TXP_OUT                            : out  std_logic;
+        GTX0_TXPOSTEMPHASIS_IN                  : in   std_logic_vector(4 downto 0);
+        --------------- Transmit Ports - TX Driver and OOB signalling --------------
+        GTX0_TXPREEMPHASIS_IN                   : in   std_logic_vector(3 downto 0);
+        ----------------------- Transmit Ports - TX PLL Ports ----------------------
+        GTX0_GTXTXRESET_IN                      : in   std_logic;
+        GTX0_TXRESETDONE_OUT                    : out  std_logic;
     
-    --_________________________________________________________________________
-    --_________________________________________________________________________
-    --GTX1  (X0_Y1)
-
-    ------------------------ Loopback and Powerdown Ports ----------------------
-    GTX1_LOOPBACK_IN                        : in   std_logic_vector(2 downto 0);
-    --------------- Receive Ports - Comma Detection and Alignment --------------
-    GTX1_RXBYTEISALIGNED_OUT                : out  std_logic;
-    GTX1_RXCOMMADET_OUT                     : out  std_logic;
-    GTX1_RXSLIDE_IN                         : in   std_logic;
-    ------------------- Receive Ports - RX Data Path interface -----------------
-    GTX1_RXDATA_OUT                         : out  std_logic_vector(19 downto 0);
-    GTX1_RXRECCLK_OUT                       : out  std_logic;
-    GTX1_RXRESET_IN                         : in   std_logic;
-    GTX1_RXUSRCLK2_IN                       : in   std_logic;
-    ------- Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR ------
-    GTX1_RXEQMIX_IN                         : in   std_logic_vector(2 downto 0);
-    GTX1_RXN_IN                             : in   std_logic;
-    GTX1_RXP_IN                             : in   std_logic;
-    ------------------------ Receive Ports - RX PLL Ports ----------------------
-    GTX1_GTXRXRESET_IN                      : in   std_logic;
-    GTX1_MGTREFCLKRX_IN                     : in   std_logic;
-    GTX1_PLLRXRESET_IN                      : in   std_logic;
-    GTX1_RXPLLLKDET_OUT                     : out  std_logic;
-    GTX1_RXRESETDONE_OUT                    : out  std_logic;
-    ------------------------- Transmit Ports - GTX Ports -----------------------
-    GTX1_GTXTEST_IN                         : in   std_logic_vector(12 downto 0);
-    ------------------ Transmit Ports - TX Data Path interface -----------------
-    GTX1_TXDATA_IN                          : in   std_logic_vector(19 downto 0);
-    GTX1_TXOUTCLK_OUT                       : out  std_logic;
-    GTX1_TXRESET_IN                         : in   std_logic;
-    GTX1_TXUSRCLK2_IN                       : in   std_logic;
-    ---------------- Transmit Ports - TX Driver and OOB signaling --------------
-    GTX1_TXDIFFCTRL_IN                      : in   std_logic_vector(3 downto 0);
-    GTX1_TXN_OUT                            : out  std_logic;
-    GTX1_TXP_OUT                            : out  std_logic;
-    GTX1_TXPOSTEMPHASIS_IN                  : in   std_logic_vector(4 downto 0);
-    --------------- Transmit Ports - TX Driver and OOB signalling --------------
-    GTX1_TXPREEMPHASIS_IN                   : in   std_logic_vector(3 downto 0);
-    ----------------------- Transmit Ports - TX PLL Ports ----------------------
-    GTX1_GTXTXRESET_IN                      : in   std_logic;
-    GTX1_TXRESETDONE_OUT                    : out  std_logic;
-
-
     
-    --_________________________________________________________________________
-    --_________________________________________________________________________
-    --GTX2  (X0_Y2)
-
-    ------------------------ Loopback and Powerdown Ports ----------------------
-    GTX2_LOOPBACK_IN                        : in   std_logic_vector(2 downto 0);
-    --------------- Receive Ports - Comma Detection and Alignment --------------
-    GTX2_RXBYTEISALIGNED_OUT                : out  std_logic;
-    GTX2_RXCOMMADET_OUT                     : out  std_logic;
-    GTX2_RXSLIDE_IN                         : in   std_logic;
-    ------------------- Receive Ports - RX Data Path interface -----------------
-    GTX2_RXDATA_OUT                         : out  std_logic_vector(19 downto 0);
-    GTX2_RXRECCLK_OUT                       : out  std_logic;
-    GTX2_RXRESET_IN                         : in   std_logic;
-    GTX2_RXUSRCLK2_IN                       : in   std_logic;
-    ------- Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR ------
-    GTX2_RXEQMIX_IN                         : in   std_logic_vector(2 downto 0);
-    GTX2_RXN_IN                             : in   std_logic;
-    GTX2_RXP_IN                             : in   std_logic;
-    ------------------------ Receive Ports - RX PLL Ports ----------------------
-    GTX2_GTXRXRESET_IN                      : in   std_logic;
-    GTX2_MGTREFCLKRX_IN                     : in   std_logic;
-    GTX2_PLLRXRESET_IN                      : in   std_logic;
-    GTX2_RXPLLLKDET_OUT                     : out  std_logic;
-    GTX2_RXRESETDONE_OUT                    : out  std_logic;
-    ------------------------- Transmit Ports - GTX Ports -----------------------
-    GTX2_GTXTEST_IN                         : in   std_logic_vector(12 downto 0);
-    ------------------ Transmit Ports - TX Data Path interface -----------------
-    GTX2_TXDATA_IN                          : in   std_logic_vector(19 downto 0);
-    GTX2_TXOUTCLK_OUT                       : out  std_logic;
-    GTX2_TXRESET_IN                         : in   std_logic;
-    GTX2_TXUSRCLK2_IN                       : in   std_logic;
-    ---------------- Transmit Ports - TX Driver and OOB signaling --------------
-    GTX2_TXDIFFCTRL_IN                      : in   std_logic_vector(3 downto 0);
-    GTX2_TXN_OUT                            : out  std_logic;
-    GTX2_TXP_OUT                            : out  std_logic;
-    GTX2_TXPOSTEMPHASIS_IN                  : in   std_logic_vector(4 downto 0);
-    --------------- Transmit Ports - TX Driver and OOB signalling --------------
-    GTX2_TXPREEMPHASIS_IN                   : in   std_logic_vector(3 downto 0);
-    ----------------------- Transmit Ports - TX PLL Ports ----------------------
-    GTX2_GTXTXRESET_IN                      : in   std_logic;
-    GTX2_TXRESETDONE_OUT                    : out  std_logic;
-
-
+        
+        --_________________________________________________________________________
+        --_________________________________________________________________________
+        --GTX1  (X0_Y1)
     
-    --_________________________________________________________________________
-    --_________________________________________________________________________
-    --GTX3  (X0_Y3)
-
-    ------------------------ Loopback and Powerdown Ports ----------------------
-    GTX3_LOOPBACK_IN                        : in   std_logic_vector(2 downto 0);
-    --------------- Receive Ports - Comma Detection and Alignment --------------
-    GTX3_RXBYTEISALIGNED_OUT                : out  std_logic;
-    GTX3_RXCOMMADET_OUT                     : out  std_logic;
-    GTX3_RXSLIDE_IN                         : in   std_logic;
-    ------------------- Receive Ports - RX Data Path interface -----------------
-    GTX3_RXDATA_OUT                         : out  std_logic_vector(19 downto 0);
-    GTX3_RXRECCLK_OUT                       : out  std_logic;
-    GTX3_RXRESET_IN                         : in   std_logic;
-    GTX3_RXUSRCLK2_IN                       : in   std_logic;
-    ------- Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR ------
-    GTX3_RXEQMIX_IN                         : in   std_logic_vector(2 downto 0);
-    GTX3_RXN_IN                             : in   std_logic;
-    GTX3_RXP_IN                             : in   std_logic;
-    ------------------------ Receive Ports - RX PLL Ports ----------------------
-    GTX3_GTXRXRESET_IN                      : in   std_logic;
-    GTX3_MGTREFCLKRX_IN                     : in   std_logic;
-    GTX3_PLLRXRESET_IN                      : in   std_logic;
-    GTX3_RXPLLLKDET_OUT                     : out  std_logic;
-    GTX3_RXRESETDONE_OUT                    : out  std_logic;
-    ------------------------- Transmit Ports - GTX Ports -----------------------
-    GTX3_GTXTEST_IN                         : in   std_logic_vector(12 downto 0);
-    ------------------ Transmit Ports - TX Data Path interface -----------------
-    GTX3_TXDATA_IN                          : in   std_logic_vector(19 downto 0);
-    GTX3_TXOUTCLK_OUT                       : out  std_logic;
-    GTX3_TXRESET_IN                         : in   std_logic;
-    GTX3_TXUSRCLK2_IN                       : in   std_logic;
-    ---------------- Transmit Ports - TX Driver and OOB signaling --------------
-    GTX3_TXDIFFCTRL_IN                      : in   std_logic_vector(3 downto 0);
-    GTX3_TXN_OUT                            : out  std_logic;
-    GTX3_TXP_OUT                            : out  std_logic;
-    GTX3_TXPOSTEMPHASIS_IN                  : in   std_logic_vector(4 downto 0);
-    --------------- Transmit Ports - TX Driver and OOB signalling --------------
-    GTX3_TXPREEMPHASIS_IN                   : in   std_logic_vector(3 downto 0);
-    ----------------------- Transmit Ports - TX PLL Ports ----------------------
-    GTX3_GTXTXRESET_IN                      : in   std_logic;
-    GTX3_TXRESETDONE_OUT                    : out  std_logic
-
-
-);
-end component;
-
+        ------------------------ Loopback and Powerdown Ports ----------------------
+        GTX1_LOOPBACK_IN                        : in   std_logic_vector(2 downto 0);
+        --------------- Receive Ports - Comma Detection and Alignment --------------
+        GTX1_RXBYTEISALIGNED_OUT                : out  std_logic;
+        GTX1_RXCOMMADET_OUT                     : out  std_logic;
+        GTX1_RXENMCOMMAALIGN_IN                 : in   std_logic;
+        GTX1_RXENPCOMMAALIGN_IN                 : in   std_logic;
+        ------------------- Receive Ports - RX Data Path interface -----------------
+        GTX1_RXDATA_OUT                         : out  std_logic_vector(19 downto 0);
+        GTX1_RXRECCLK_OUT                       : out  std_logic;
+        GTX1_RXRESET_IN                         : in   std_logic;
+        GTX1_RXUSRCLK2_IN                       : in   std_logic;
+        ------- Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR ------
+        GTX1_RXEQMIX_IN                         : in   std_logic_vector(2 downto 0);
+        GTX1_RXN_IN                             : in   std_logic;
+        GTX1_RXP_IN                             : in   std_logic;
+        ------------------------ Receive Ports - RX PLL Ports ----------------------
+        GTX1_GTXRXRESET_IN                      : in   std_logic;
+        GTX1_MGTREFCLKRX_IN                     : in   std_logic;
+        GTX1_PLLRXRESET_IN                      : in   std_logic;
+        GTX1_RXPLLLKDET_OUT                     : out  std_logic;
+        GTX1_RXRESETDONE_OUT                    : out  std_logic;
+        ------------------------- Transmit Ports - GTX Ports -----------------------
+        GTX1_GTXTEST_IN                         : in   std_logic_vector(12 downto 0);
+        ------------------ Transmit Ports - TX Data Path interface -----------------
+        GTX1_TXDATA_IN                          : in   std_logic_vector(19 downto 0);
+        GTX1_TXOUTCLK_OUT                       : out  std_logic;
+        GTX1_TXRESET_IN                         : in   std_logic;
+        GTX1_TXUSRCLK2_IN                       : in   std_logic;
+        ---------------- Transmit Ports - TX Driver and OOB signaling --------------
+        GTX1_TXDIFFCTRL_IN                      : in   std_logic_vector(3 downto 0);
+        GTX1_TXN_OUT                            : out  std_logic;
+        GTX1_TXP_OUT                            : out  std_logic;
+        GTX1_TXPOSTEMPHASIS_IN                  : in   std_logic_vector(4 downto 0);
+        --------------- Transmit Ports - TX Driver and OOB signalling --------------
+        GTX1_TXPREEMPHASIS_IN                   : in   std_logic_vector(3 downto 0);
+        ----------------------- Transmit Ports - TX PLL Ports ----------------------
+        GTX1_GTXTXRESET_IN                      : in   std_logic;
+        GTX1_TXRESETDONE_OUT                    : out  std_logic;
+    
+    
+        
+        --_________________________________________________________________________
+        --_________________________________________________________________________
+        --GTX2  (X0_Y2)
+    
+        ------------------------ Loopback and Powerdown Ports ----------------------
+        GTX2_LOOPBACK_IN                        : in   std_logic_vector(2 downto 0);
+        --------------- Receive Ports - Comma Detection and Alignment --------------
+        GTX2_RXBYTEISALIGNED_OUT                : out  std_logic;
+        GTX2_RXCOMMADET_OUT                     : out  std_logic;
+        GTX2_RXENMCOMMAALIGN_IN                 : in   std_logic;
+        GTX2_RXENPCOMMAALIGN_IN                 : in   std_logic;
+        ------------------- Receive Ports - RX Data Path interface -----------------
+        GTX2_RXDATA_OUT                         : out  std_logic_vector(19 downto 0);
+        GTX2_RXRECCLK_OUT                       : out  std_logic;
+        GTX2_RXRESET_IN                         : in   std_logic;
+        GTX2_RXUSRCLK2_IN                       : in   std_logic;
+        ------- Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR ------
+        GTX2_RXEQMIX_IN                         : in   std_logic_vector(2 downto 0);
+        GTX2_RXN_IN                             : in   std_logic;
+        GTX2_RXP_IN                             : in   std_logic;
+        ------------------------ Receive Ports - RX PLL Ports ----------------------
+        GTX2_GTXRXRESET_IN                      : in   std_logic;
+        GTX2_MGTREFCLKRX_IN                     : in   std_logic;
+        GTX2_PLLRXRESET_IN                      : in   std_logic;
+        GTX2_RXPLLLKDET_OUT                     : out  std_logic;
+        GTX2_RXRESETDONE_OUT                    : out  std_logic;
+        ------------------------- Transmit Ports - GTX Ports -----------------------
+        GTX2_GTXTEST_IN                         : in   std_logic_vector(12 downto 0);
+        ------------------ Transmit Ports - TX Data Path interface -----------------
+        GTX2_TXDATA_IN                          : in   std_logic_vector(19 downto 0);
+        GTX2_TXOUTCLK_OUT                       : out  std_logic;
+        GTX2_TXRESET_IN                         : in   std_logic;
+        GTX2_TXUSRCLK2_IN                       : in   std_logic;
+        ---------------- Transmit Ports - TX Driver and OOB signaling --------------
+        GTX2_TXDIFFCTRL_IN                      : in   std_logic_vector(3 downto 0);
+        GTX2_TXN_OUT                            : out  std_logic;
+        GTX2_TXP_OUT                            : out  std_logic;
+        GTX2_TXPOSTEMPHASIS_IN                  : in   std_logic_vector(4 downto 0);
+        --------------- Transmit Ports - TX Driver and OOB signalling --------------
+        GTX2_TXPREEMPHASIS_IN                   : in   std_logic_vector(3 downto 0);
+        ----------------------- Transmit Ports - TX PLL Ports ----------------------
+        GTX2_GTXTXRESET_IN                      : in   std_logic;
+        GTX2_TXRESETDONE_OUT                    : out  std_logic;
+    
+    
+        
+        --_________________________________________________________________________
+        --_________________________________________________________________________
+        --GTX3  (X0_Y3)
+    
+        ------------------------ Loopback and Powerdown Ports ----------------------
+        GTX3_LOOPBACK_IN                        : in   std_logic_vector(2 downto 0);
+        --------------- Receive Ports - Comma Detection and Alignment --------------
+        GTX3_RXBYTEISALIGNED_OUT                : out  std_logic;
+        GTX3_RXCOMMADET_OUT                     : out  std_logic;
+        GTX3_RXENMCOMMAALIGN_IN                 : in   std_logic;
+        GTX3_RXENPCOMMAALIGN_IN                 : in   std_logic;
+        ------------------- Receive Ports - RX Data Path interface -----------------
+        GTX3_RXDATA_OUT                         : out  std_logic_vector(19 downto 0);
+        GTX3_RXRECCLK_OUT                       : out  std_logic;
+        GTX3_RXRESET_IN                         : in   std_logic;
+        GTX3_RXUSRCLK2_IN                       : in   std_logic;
+        ------- Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR ------
+        GTX3_RXEQMIX_IN                         : in   std_logic_vector(2 downto 0);
+        GTX3_RXN_IN                             : in   std_logic;
+        GTX3_RXP_IN                             : in   std_logic;
+        ------------------------ Receive Ports - RX PLL Ports ----------------------
+        GTX3_GTXRXRESET_IN                      : in   std_logic;
+        GTX3_MGTREFCLKRX_IN                     : in   std_logic;
+        GTX3_PLLRXRESET_IN                      : in   std_logic;
+        GTX3_RXPLLLKDET_OUT                     : out  std_logic;
+        GTX3_RXRESETDONE_OUT                    : out  std_logic;
+        ------------------------- Transmit Ports - GTX Ports -----------------------
+        GTX3_GTXTEST_IN                         : in   std_logic_vector(12 downto 0);
+        ------------------ Transmit Ports - TX Data Path interface -----------------
+        GTX3_TXDATA_IN                          : in   std_logic_vector(19 downto 0);
+        GTX3_TXOUTCLK_OUT                       : out  std_logic;
+        GTX3_TXRESET_IN                         : in   std_logic;
+        GTX3_TXUSRCLK2_IN                       : in   std_logic;
+        ---------------- Transmit Ports - TX Driver and OOB signaling --------------
+        GTX3_TXDIFFCTRL_IN                      : in   std_logic_vector(3 downto 0);
+        GTX3_TXN_OUT                            : out  std_logic;
+        GTX3_TXP_OUT                            : out  std_logic;
+        GTX3_TXPOSTEMPHASIS_IN                  : in   std_logic_vector(4 downto 0);
+        --------------- Transmit Ports - TX Driver and OOB signalling --------------
+        GTX3_TXPREEMPHASIS_IN                   : in   std_logic_vector(3 downto 0);
+        ----------------------- Transmit Ports - TX PLL Ports ----------------------
+        GTX3_GTXTXRESET_IN                      : in   std_logic;
+        GTX3_TXRESETDONE_OUT                    : out  std_logic
+    
+    
+    );
+    end component;
+    
     component chipscope_icon
     PORT (
         CONTROL0 : INOUT STD_LOGIC_VECTOR(35 DOWNTO 0);
@@ -405,7 +409,8 @@ begin
             --------------- Receive Ports - Comma Detection and Alignment --------------
             GTX0_RXBYTEISALIGNED_OUT        =>      rx_byte_aligned(0),
             GTX0_RXCOMMADET_OUT             =>      rx_comma_detected(0),
-            GTX0_RXSLIDE_IN                 =>      rx_std_wa_patternalign,
+            GTX0_RXENMCOMMAALIGN_IN         =>      rx_std_wa_patternalign,
+            GTX0_RXENPCOMMAALIGN_IN         =>      rx_std_wa_patternalign,
             ------------------- Receive Ports - RX Data Path interface -----------------
             GTX0_RXDATA_OUT                 =>      from_xcvr_Rx_opensrc(0),
             GTX0_RXRECCLK_OUT               =>      XCVR_Rx_clk_out_ch(0),
@@ -456,7 +461,8 @@ begin
             --------------- Receive Ports - Comma Detection and Alignment --------------
             GTX1_RXBYTEISALIGNED_OUT        =>      rx_byte_aligned(1),
             GTX1_RXCOMMADET_OUT             =>      rx_comma_detected(1),
-            GTX1_RXSLIDE_IN                 =>      rx_std_wa_patternalign,
+            GTX1_RXENMCOMMAALIGN_IN         =>      rx_std_wa_patternalign,
+            GTX1_RXENPCOMMAALIGN_IN         =>      rx_std_wa_patternalign,
             ------------------- Receive Ports - RX Data Path interface -----------------
             GTX1_RXDATA_OUT                 =>      from_xcvr_Rx_opensrc(1),
             GTX1_RXRECCLK_OUT               =>      XCVR_Rx_clk_out_ch(1),
@@ -507,7 +513,8 @@ begin
             --------------- Receive Ports - Comma Detection and Alignment --------------
             GTX2_RXBYTEISALIGNED_OUT        =>      rx_byte_aligned(2),
             GTX2_RXCOMMADET_OUT             =>      rx_comma_detected(2),
-            GTX2_RXSLIDE_IN                 =>      rx_std_wa_patternalign,
+            GTX2_RXENMCOMMAALIGN_IN         =>      rx_std_wa_patternalign,
+            GTX2_RXENPCOMMAALIGN_IN         =>      rx_std_wa_patternalign,
             ------------------- Receive Ports - RX Data Path interface -----------------
             GTX2_RXDATA_OUT                 =>      from_xcvr_Rx_opensrc(2),
             GTX2_RXRECCLK_OUT               =>      XCVR_Rx_clk_out_ch(2),
@@ -558,7 +565,8 @@ begin
             --------------- Receive Ports - Comma Detection and Alignment --------------
             GTX3_RXBYTEISALIGNED_OUT        =>      rx_byte_aligned(3),
             GTX3_RXCOMMADET_OUT             =>      rx_comma_detected(3),
-            GTX3_RXSLIDE_IN                 =>      rx_std_wa_patternalign,
+            GTX3_RXENMCOMMAALIGN_IN         =>      rx_std_wa_patternalign,
+            GTX3_RXENPCOMMAALIGN_IN         =>      rx_std_wa_patternalign,
             ------------------- Receive Ports - RX Data Path interface -----------------
             GTX3_RXDATA_OUT                 =>      from_xcvr_Rx_opensrc(3),
             GTX3_RXRECCLK_OUT               =>      XCVR_Rx_clk_out_ch(3),

@@ -88,7 +88,8 @@ port
     --------------- Receive Ports - Comma Detection and Alignment --------------
     GTX0_RXBYTEISALIGNED_OUT                : out  std_logic;
     GTX0_RXCOMMADET_OUT                     : out  std_logic;
-    GTX0_RXSLIDE_IN                         : in   std_logic;
+    GTX0_RXENMCOMMAALIGN_IN                 : in   std_logic;
+    GTX0_RXENPCOMMAALIGN_IN                 : in   std_logic;
     ------------------- Receive Ports - RX Data Path interface -----------------
     GTX0_RXDATA_OUT                         : out  std_logic_vector(19 downto 0);
     GTX0_RXRECCLK_OUT                       : out  std_logic;
@@ -133,7 +134,8 @@ port
     --------------- Receive Ports - Comma Detection and Alignment --------------
     GTX1_RXBYTEISALIGNED_OUT                : out  std_logic;
     GTX1_RXCOMMADET_OUT                     : out  std_logic;
-    GTX1_RXSLIDE_IN                         : in   std_logic;
+    GTX1_RXENMCOMMAALIGN_IN                 : in   std_logic;
+    GTX1_RXENPCOMMAALIGN_IN                 : in   std_logic;
     ------------------- Receive Ports - RX Data Path interface -----------------
     GTX1_RXDATA_OUT                         : out  std_logic_vector(19 downto 0);
     GTX1_RXRECCLK_OUT                       : out  std_logic;
@@ -178,7 +180,8 @@ port
     --------------- Receive Ports - Comma Detection and Alignment --------------
     GTX2_RXBYTEISALIGNED_OUT                : out  std_logic;
     GTX2_RXCOMMADET_OUT                     : out  std_logic;
-    GTX2_RXSLIDE_IN                         : in   std_logic;
+    GTX2_RXENMCOMMAALIGN_IN                 : in   std_logic;
+    GTX2_RXENPCOMMAALIGN_IN                 : in   std_logic;
     ------------------- Receive Ports - RX Data Path interface -----------------
     GTX2_RXDATA_OUT                         : out  std_logic_vector(19 downto 0);
     GTX2_RXRECCLK_OUT                       : out  std_logic;
@@ -223,7 +226,8 @@ port
     --------------- Receive Ports - Comma Detection and Alignment --------------
     GTX3_RXBYTEISALIGNED_OUT                : out  std_logic;
     GTX3_RXCOMMADET_OUT                     : out  std_logic;
-    GTX3_RXSLIDE_IN                         : in   std_logic;
+    GTX3_RXENMCOMMAALIGN_IN                 : in   std_logic;
+    GTX3_RXENPCOMMAALIGN_IN                 : in   std_logic;
     ------------------- Receive Ports - RX Data Path interface -----------------
     GTX3_RXDATA_OUT                         : out  std_logic_vector(19 downto 0);
     GTX3_RXRECCLK_OUT                       : out  std_logic;
@@ -308,7 +312,8 @@ port
     --------------- Receive Ports - Comma Detection and Alignment --------------
     RXBYTEISALIGNED_OUT                     : out  std_logic;
     RXCOMMADET_OUT                          : out  std_logic;
-    RXSLIDE_IN                              : in   std_logic;
+    RXENMCOMMAALIGN_IN                      : in   std_logic;
+    RXENPCOMMAALIGN_IN                      : in   std_logic;
     ------------------- Receive Ports - RX Data Path interface -----------------
     RXDATA_OUT                              : out  std_logic_vector(19 downto 0);
     RXRECCLK_OUT                            : out  std_logic;
@@ -391,7 +396,8 @@ begin
         --------------- Receive Ports - Comma Detection and Alignment --------------
         RXBYTEISALIGNED_OUT             =>      GTX0_RXBYTEISALIGNED_OUT,
         RXCOMMADET_OUT                  =>      GTX0_RXCOMMADET_OUT,
-        RXSLIDE_IN                      =>      GTX0_RXSLIDE_IN,
+        RXENMCOMMAALIGN_IN              =>      GTX0_RXENMCOMMAALIGN_IN,
+        RXENPCOMMAALIGN_IN              =>      GTX0_RXENPCOMMAALIGN_IN,
         ------------------- Receive Ports - RX Data Path interface -----------------
         RXDATA_OUT                      =>      GTX0_RXDATA_OUT,
         RXRECCLK_OUT                    =>      GTX0_RXRECCLK_OUT,
@@ -454,7 +460,8 @@ begin
         --------------- Receive Ports - Comma Detection and Alignment --------------
         RXBYTEISALIGNED_OUT             =>      GTX1_RXBYTEISALIGNED_OUT,
         RXCOMMADET_OUT                  =>      GTX1_RXCOMMADET_OUT,
-        RXSLIDE_IN                      =>      GTX1_RXSLIDE_IN,
+        RXENMCOMMAALIGN_IN              =>      GTX1_RXENMCOMMAALIGN_IN,
+        RXENPCOMMAALIGN_IN              =>      GTX1_RXENPCOMMAALIGN_IN,
         ------------------- Receive Ports - RX Data Path interface -----------------
         RXDATA_OUT                      =>      GTX1_RXDATA_OUT,
         RXRECCLK_OUT                    =>      GTX1_RXRECCLK_OUT,
@@ -517,7 +524,8 @@ begin
         --------------- Receive Ports - Comma Detection and Alignment --------------
         RXBYTEISALIGNED_OUT             =>      GTX2_RXBYTEISALIGNED_OUT,
         RXCOMMADET_OUT                  =>      GTX2_RXCOMMADET_OUT,
-        RXSLIDE_IN                      =>      GTX2_RXSLIDE_IN,
+        RXENMCOMMAALIGN_IN              =>      GTX2_RXENMCOMMAALIGN_IN,
+        RXENPCOMMAALIGN_IN              =>      GTX2_RXENPCOMMAALIGN_IN,
         ------------------- Receive Ports - RX Data Path interface -----------------
         RXDATA_OUT                      =>      GTX2_RXDATA_OUT,
         RXRECCLK_OUT                    =>      GTX2_RXRECCLK_OUT,
@@ -580,7 +588,8 @@ begin
         --------------- Receive Ports - Comma Detection and Alignment --------------
         RXBYTEISALIGNED_OUT             =>      GTX3_RXBYTEISALIGNED_OUT,
         RXCOMMADET_OUT                  =>      GTX3_RXCOMMADET_OUT,
-        RXSLIDE_IN                      =>      GTX3_RXSLIDE_IN,
+        RXENMCOMMAALIGN_IN              =>      GTX3_RXENMCOMMAALIGN_IN,
+        RXENPCOMMAALIGN_IN              =>      GTX3_RXENPCOMMAALIGN_IN,
         ------------------- Receive Ports - RX Data Path interface -----------------
         RXDATA_OUT                      =>      GTX3_RXDATA_OUT,
         RXRECCLK_OUT                    =>      GTX3_RXRECCLK_OUT,

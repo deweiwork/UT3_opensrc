@@ -191,7 +191,7 @@ INST v6_gtxwizard_v1_12_i/gtx0_v6_gtxwizard_v1_12_i/gtxe1_i PCOMMA_10B_VALUE    
 INST v6_gtxwizard_v1_12_i/gtx0_v6_gtxwizard_v1_12_i/gtxe1_i PCOMMA_DETECT                          = "TRUE";
 INST v6_gtxwizard_v1_12_i/gtx0_v6_gtxwizard_v1_12_i/gtxe1_i RX_DECODE_SEQ_MATCH                    = "FALSE";
 INST v6_gtxwizard_v1_12_i/gtx0_v6_gtxwizard_v1_12_i/gtxe1_i RX_SLIDE_AUTO_WAIT                     = 5;
-INST v6_gtxwizard_v1_12_i/gtx0_v6_gtxwizard_v1_12_i/gtxe1_i RX_SLIDE_MODE                          = "PCS";
+INST v6_gtxwizard_v1_12_i/gtx0_v6_gtxwizard_v1_12_i/gtxe1_i RX_SLIDE_MODE                          = "OFF";
 INST v6_gtxwizard_v1_12_i/gtx0_v6_gtxwizard_v1_12_i/gtxe1_i SHOW_REALIGN_COMMA                     = "TRUE";
 
 ##---------------RX Loss-of-sync State Machine----------------
@@ -404,7 +404,7 @@ INST v6_gtxwizard_v1_12_i/gtx1_v6_gtxwizard_v1_12_i/gtxe1_i PCOMMA_10B_VALUE    
 INST v6_gtxwizard_v1_12_i/gtx1_v6_gtxwizard_v1_12_i/gtxe1_i PCOMMA_DETECT                          = "TRUE";
 INST v6_gtxwizard_v1_12_i/gtx1_v6_gtxwizard_v1_12_i/gtxe1_i RX_DECODE_SEQ_MATCH                    = "FALSE";
 INST v6_gtxwizard_v1_12_i/gtx1_v6_gtxwizard_v1_12_i/gtxe1_i RX_SLIDE_AUTO_WAIT                     = 5;
-INST v6_gtxwizard_v1_12_i/gtx1_v6_gtxwizard_v1_12_i/gtxe1_i RX_SLIDE_MODE                          = "PCS";
+INST v6_gtxwizard_v1_12_i/gtx1_v6_gtxwizard_v1_12_i/gtxe1_i RX_SLIDE_MODE                          = "OFF";
 INST v6_gtxwizard_v1_12_i/gtx1_v6_gtxwizard_v1_12_i/gtxe1_i SHOW_REALIGN_COMMA                     = "TRUE";
 
 ##---------------RX Loss-of-sync State Machine----------------
@@ -617,7 +617,7 @@ INST v6_gtxwizard_v1_12_i/gtx2_v6_gtxwizard_v1_12_i/gtxe1_i PCOMMA_10B_VALUE    
 INST v6_gtxwizard_v1_12_i/gtx2_v6_gtxwizard_v1_12_i/gtxe1_i PCOMMA_DETECT                          = "TRUE";
 INST v6_gtxwizard_v1_12_i/gtx2_v6_gtxwizard_v1_12_i/gtxe1_i RX_DECODE_SEQ_MATCH                    = "FALSE";
 INST v6_gtxwizard_v1_12_i/gtx2_v6_gtxwizard_v1_12_i/gtxe1_i RX_SLIDE_AUTO_WAIT                     = 5;
-INST v6_gtxwizard_v1_12_i/gtx2_v6_gtxwizard_v1_12_i/gtxe1_i RX_SLIDE_MODE                          = "PCS";
+INST v6_gtxwizard_v1_12_i/gtx2_v6_gtxwizard_v1_12_i/gtxe1_i RX_SLIDE_MODE                          = "OFF";
 INST v6_gtxwizard_v1_12_i/gtx2_v6_gtxwizard_v1_12_i/gtxe1_i SHOW_REALIGN_COMMA                     = "TRUE";
 
 ##---------------RX Loss-of-sync State Machine----------------
@@ -830,7 +830,7 @@ INST v6_gtxwizard_v1_12_i/gtx3_v6_gtxwizard_v1_12_i/gtxe1_i PCOMMA_10B_VALUE    
 INST v6_gtxwizard_v1_12_i/gtx3_v6_gtxwizard_v1_12_i/gtxe1_i PCOMMA_DETECT                          = "TRUE";
 INST v6_gtxwizard_v1_12_i/gtx3_v6_gtxwizard_v1_12_i/gtxe1_i RX_DECODE_SEQ_MATCH                    = "FALSE";
 INST v6_gtxwizard_v1_12_i/gtx3_v6_gtxwizard_v1_12_i/gtxe1_i RX_SLIDE_AUTO_WAIT                     = 5;
-INST v6_gtxwizard_v1_12_i/gtx3_v6_gtxwizard_v1_12_i/gtxe1_i RX_SLIDE_MODE                          = "PCS";
+INST v6_gtxwizard_v1_12_i/gtx3_v6_gtxwizard_v1_12_i/gtxe1_i RX_SLIDE_MODE                          = "OFF";
 INST v6_gtxwizard_v1_12_i/gtx3_v6_gtxwizard_v1_12_i/gtxe1_i SHOW_REALIGN_COMMA                     = "TRUE";
 
 ##---------------RX Loss-of-sync State Machine----------------
