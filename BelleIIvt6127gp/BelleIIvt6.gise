@@ -23,7 +23,9 @@
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="../ipcore_dir/chipscope_icon.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_USERDOC" xil_pn:name="../ipcore_dir/chipscope_icon_readme.txt"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="../ipcore_dir/chipscope_ila.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="../ipcore_dir/coregen.log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="XCVR_TOP.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="XCVR_TOP.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="XCVR_TOP.lso"/>
@@ -64,6 +66,8 @@
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_USERDOC" xil_pn:name="ipcore_dir/chipscope_ila_2_readme.txt"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="ipcore_dir/coregen.log"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="xcvr_top.bgn" xil_pn:subbranch="FPGAConfiguration"/>
@@ -74,11 +78,15 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1555065052" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1555065052">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
     <transform xil_pn:end_ts="1555058073" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="6675084117681217737" xil_pn:start_ts="1555058073">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1555058073" xil_pn:in_ck="-3145732929765624570" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="6235045163332309626" xil_pn:start_ts="1555058073">
+    <transform xil_pn:end_ts="1555066129" xil_pn:in_ck="-8766400340888877551" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="6235045163332309626" xil_pn:start_ts="1555066128">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="../ipcore_dir/chipscope_icon.ngc"/>
@@ -94,6 +102,8 @@
       <outfile xil_pn:name="../ipcore_dir/v6_gtxwizard_v1_12/implement/ila.ngc"/>
       <outfile xil_pn:name="../ipcore_dir/v6_gtxwizard_v1_12/implement/rx_phase_align_fifo.ngc"/>
       <outfile xil_pn:name="../ipcore_dir/v6_gtxwizard_v1_12_gtx.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/chipscope_ila_2.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/chipscope_ila_2.vhd"/>
     </transform>
     <transform xil_pn:end_ts="1555058073" xil_pn:in_ck="7664976406461768307" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1555058073">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -111,7 +121,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1555058099" xil_pn:in_ck="-3696793198231015942" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="5080387899905649338" xil_pn:start_ts="1555058073">
+    <transform xil_pn:end_ts="1555066160" xil_pn:in_ck="6931939975119665693" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="5080387899905649338" xil_pn:start_ts="1555066129">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -133,7 +143,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1555058110" xil_pn:in_ck="-2588053944678580478" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-946525780098891154" xil_pn:start_ts="1555058099">
+    <transform xil_pn:end_ts="1555066175" xil_pn:in_ck="-4248986739173038341" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-946525780098891154" xil_pn:start_ts="1555066160">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="XCVR_TOP.bld"/>
@@ -142,7 +152,7 @@
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1555058197" xil_pn:in_ck="5376406880070359165" xil_pn:name="TRANEXT_map_virtex6" xil_pn:prop_ck="-4605019522666546870" xil_pn:start_ts="1555058110">
+    <transform xil_pn:end_ts="1555066269" xil_pn:in_ck="5376406880070359165" xil_pn:name="TRANEXT_map_virtex6" xil_pn:prop_ck="-4605019522666546870" xil_pn:start_ts="1555066175">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -157,7 +167,7 @@
       <outfile xil_pn:name="XCVR_TOP_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1555058282" xil_pn:in_ck="8911132919944375702" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-7506534167551747124" xil_pn:start_ts="1555058197">
+    <transform xil_pn:end_ts="1555066359" xil_pn:in_ck="8911132919944375702" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-7506534167551747124" xil_pn:start_ts="1555066269">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="XCVR_TOP.ncd"/>
@@ -171,12 +181,10 @@
       <outfile xil_pn:name="XCVR_TOP_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1555058389" xil_pn:in_ck="4554432038809679896" xil_pn:name="TRANEXT_bitFile_virtex6" xil_pn:prop_ck="-3618303722886493866" xil_pn:start_ts="1555058282">
+    <transform xil_pn:end_ts="1555066471" xil_pn:in_ck="4554432038809679896" xil_pn:name="TRANEXT_bitFile_virtex6" xil_pn:prop_ck="-3618303722886493866" xil_pn:start_ts="1555066359">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="XCVR_TOP.ut"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="webtalk.log"/>
@@ -185,15 +193,15 @@
       <outfile xil_pn:name="xcvr_top.bit"/>
       <outfile xil_pn:name="xcvr_top.drc"/>
     </transform>
-    <transform xil_pn:end_ts="1555058661" xil_pn:in_ck="6222320189971290818" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="-5555903658368550997" xil_pn:start_ts="1555058659">
+    <transform xil_pn:end_ts="1555066481" xil_pn:in_ck="6222320189971290818" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="-5555903658368550997" xil_pn:start_ts="1555066471">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1555058748" xil_pn:in_ck="6222320189971290818" xil_pn:name="TRAN_analyzeDesignUsingChipscope" xil_pn:prop_ck="-946525780098891154" xil_pn:start_ts="1555058748">
+    <transform xil_pn:end_ts="1555066537" xil_pn:in_ck="6222320189971290818" xil_pn:name="TRAN_analyzeDesignUsingChipscope" xil_pn:prop_ck="-946525780098891154" xil_pn:start_ts="1555066536">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1555058282" xil_pn:in_ck="6575919790790963705" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1555058264">
+    <transform xil_pn:end_ts="1555066359" xil_pn:in_ck="6575919790790963705" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1555066339">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="XCVR_TOP.twr"/>

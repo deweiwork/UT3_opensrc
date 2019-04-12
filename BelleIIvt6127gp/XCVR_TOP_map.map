@@ -10,7 +10,7 @@ Target Device  : xc6vhx380t
 Target Package : ff1923
 Target Speed   : -2
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Fri Apr 12 16:35:11 2019
+Mapped Date    : Fri Apr 12 18:49:36 2019
 
 Mapping design into LUTs...
 Running directed packing...
@@ -19,65 +19,69 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 38 secs 
-Total CPU  time at the beginning of Placer: 38 secs 
+Total REAL time at the beginning of Placer: 40 secs 
+Total CPU  time at the beginning of Placer: 40 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:6a4ace2c) REAL time: 59 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:cd53a3c3) REAL time: 1 mins 2 secs 
 
 Phase 2.7  Design Feasibility Check
 INFO:Place:834 - Only a subset of IOs are locked. Out of 142 IOs, 3 are locked
    and 139 are not locked. If you would like to print the names of these IOs,
    please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
-Phase 2.7  Design Feasibility Check (Checksum:6a4ace2c) REAL time: 1 mins 
+Phase 2.7  Design Feasibility Check (Checksum:cd53a3c3) REAL time: 1 mins 3 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:6c4e4542) REAL time: 1 mins 
+Phase 3.31  Local Placement Optimization (Checksum:dfb9db15) REAL time: 1 mins 3 secs 
 
 Phase 4.37  Local Placement Optimization
-Phase 4.37  Local Placement Optimization (Checksum:6c4e4542) REAL time: 1 mins 
+Phase 4.37  Local Placement Optimization (Checksum:dfb9db15) REAL time: 1 mins 3 secs 
 
 Phase 5.2  Initial Placement for Architecture Specific Features
 ....
 Phase 5.2  Initial Placement for Architecture Specific Features
-(Checksum:f772a060) REAL time: 1 mins 6 secs 
+(Checksum:7238a93f) REAL time: 1 mins 9 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:f772a060) REAL time: 1 mins 6 secs 
+Phase 6.36  Local Placement Optimization (Checksum:7238a93f) REAL time: 1 mins 9 secs 
 
 Phase 7.30  Global Clock Region Assignment
-Phase 7.30  Global Clock Region Assignment (Checksum:f772a060) REAL time: 1 mins 6 secs 
+Phase 7.30  Global Clock Region Assignment (Checksum:7238a93f) REAL time: 1 mins 9 secs 
 
 Phase 8.3  Local Placement Optimization
 ......
-Phase 8.3  Local Placement Optimization (Checksum:3f5c8e29) REAL time: 1 mins 7 secs 
+Phase 8.3  Local Placement Optimization (Checksum:f0c9be00) REAL time: 1 mins 11 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:3f5c8e29) REAL time: 1 mins 7 secs 
+Phase 9.5  Local Placement Optimization (Checksum:f0c9be00) REAL time: 1 mins 11 secs 
 
 Phase 10.8  Global Placement
-..............................
-..........................................................................................................................................................................
-......................................................................................
-.....
-Phase 10.8  Global Placement (Checksum:b8b002e1) REAL time: 1 mins 14 secs 
+........................
+.............................................................................................................
+...............................................................................
+...
+Phase 10.8  Global Placement (Checksum:58c50411) REAL time: 1 mins 18 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:b8b002e1) REAL time: 1 mins 14 secs 
+Phase 11.5  Local Placement Optimization (Checksum:58c50411) REAL time: 1 mins 18 secs 
 
 Phase 12.18  Placement Optimization
-Phase 12.18  Placement Optimization (Checksum:1ab0bcad) REAL time: 1 mins 21 secs 
+Phase 12.18  Placement Optimization (Checksum:3a75e17d) REAL time: 1 mins 27 secs 
 
 Phase 13.5  Local Placement Optimization
-Phase 13.5  Local Placement Optimization (Checksum:1ab0bcad) REAL time: 1 mins 21 secs 
+Phase 13.5  Local Placement Optimization (Checksum:3a75e17d) REAL time: 1 mins 27 secs 
 
 Phase 14.34  Placement Validation
-Phase 14.34  Placement Validation (Checksum:9778a543) REAL time: 1 mins 21 secs 
+Phase 14.34  Placement Validation (Checksum:3b28d707) REAL time: 1 mins 27 secs 
 
-Total REAL time to Placer completion: 1 mins 22 secs 
-Total CPU  time to Placer completion: 1 mins 22 secs 
+Total REAL time to Placer completion: 1 mins 27 secs 
+Total CPU  time to Placer completion: 1 mins 27 secs 
 Running post-placement packing...
 Writing output files...
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_2<13> is sourced
+   by a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    Connect_XVCR_Module_loop[0].XCVR_Module_gen/chip_scope_ctrl_0<13> is sourced
    by a combinatorial pin. This is not good design practice. Use the CE pin to
@@ -92,40 +96,40 @@ Design Summary
 
 Design Summary:
 Number of errors:      0
-Number of warnings:    2
+Number of warnings:    3
 Slice Logic Utilization:
-  Number of Slice Registers:                 2,935 out of 478,080    1%
-    Number used as Flip Flops:               2,933
-    Number used as Latches:                      2
+  Number of Slice Registers:                 4,317 out of 478,080    1%
+    Number used as Flip Flops:               4,314
+    Number used as Latches:                      3
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      2,046 out of 239,040    1%
-    Number used as logic:                      970 out of 239,040    1%
-      Number using O6 output only:             529
-      Number using O5 output only:             105
-      Number using O5 and O6:                  336
+  Number of Slice LUTs:                      2,923 out of 239,040    1%
+    Number used as logic:                    1,155 out of 239,040    1%
+      Number using O6 output only:             642
+      Number using O5 output only:             158
+      Number using O5 and O6:                  355
       Number used as ROM:                        0
-    Number used as Memory:                     480 out of  73,120    1%
+    Number used as Memory:                     842 out of  73,120    1%
       Number used as Dual Port RAM:              0
       Number used as Single Port RAM:            0
-      Number used as Shift Register:           480
-        Number using O6 output only:           310
-        Number using O5 output only:             2
-        Number using O5 and O6:                168
-    Number used exclusively as route-thrus:    596
-      Number with same-slice register load:    376
-      Number with same-slice carry load:       220
+      Number used as Shift Register:           842
+        Number using O6 output only:           543
+        Number using O5 output only:             3
+        Number using O5 and O6:                296
+    Number used exclusively as route-thrus:    926
+      Number with same-slice register load:    711
+      Number with same-slice carry load:       215
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,014 out of  59,760    1%
-  Number of LUT Flip Flop pairs used:        3,038
-    Number with an unused Flip Flop:           825 out of   3,038   27%
-    Number with an unused LUT:                 992 out of   3,038   32%
-    Number of fully used LUT-FF pairs:       1,221 out of   3,038   40%
-    Number of unique control sets:             195
+  Number of occupied Slices:                 1,309 out of  59,760    2%
+  Number of LUT Flip Flop pairs used:        4,152
+    Number with an unused Flip Flop:         1,035 out of   4,152   24%
+    Number with an unused LUT:               1,229 out of   4,152   29%
+    Number of fully used LUT-FF pairs:       1,888 out of   4,152   45%
+    Number of unique control sets:             268
     Number of slice register sites lost
-      to control set restrictions:             681 out of 478,080    1%
+      to control set restrictions:             937 out of 478,080    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -145,11 +149,11 @@ IO Utilization:
       Number of LOCed OPADs:                     4 out of       8   50%
 
 Specific Feature Utilization:
-  Number of RAMB36E1/FIFO36E1s:                 10 out of     768    1%
-    Number using RAMB36E1 only:                 10
+  Number of RAMB36E1/FIFO36E1s:                 18 out of     768    2%
+    Number using RAMB36E1 only:                 18
     Number using FIFO36E1 only:                  0
-  Number of RAMB18E1/FIFO18E1s:                  2 out of   1,536    1%
-    Number using RAMB18E1 only:                  2
+  Number of RAMB18E1/FIFO18E1s:                  3 out of   1,536    1%
+    Number using RAMB18E1 only:                  3
     Number using FIFO18E1 only:                  0
   Number of BUFG/BUFGCTRLs:                     10 out of      32   31%
     Number used as BUFGs:                       10
@@ -179,12 +183,12 @@ Specific Feature Utilization:
   Number of SYSMONs:                             0 out of       1    0%
   Number of TEMAC_SINGLEs:                       0 out of       4    0%
 
-  Number of RPM macros:           38
-Average Fanout of Non-Clock Nets:                2.63
+  Number of RPM macros:           62
+Average Fanout of Non-Clock Nets:                2.60
 
-Peak Memory Usage:  5155 MB
-Total REAL time to MAP completion:  1 mins 24 secs 
-Total CPU time to MAP completion:   1 mins 24 secs 
+Peak Memory Usage:  5192 MB
+Total REAL time to MAP completion:  1 mins 30 secs 
+Total CPU time to MAP completion:   1 mins 30 secs 
 
 Mapping completed.
 See MAP report file "XCVR_TOP_map.mrp" for details.
