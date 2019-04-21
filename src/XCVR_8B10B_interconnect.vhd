@@ -95,7 +95,7 @@ architecture XCVR_8B10B_interconnect_Top of XCVR_8B10B_interconnect is
 
     signal rx_freqlocked_ch             : ser_data_men;
 
-    signal XCVR_TxRx_rst                : ser_data_men;
+    signal XCVR_TxRx_rst                : std_logic;
 
     --===============--
     --  for xilinx  --
@@ -141,6 +141,7 @@ architecture XCVR_8B10B_interconnect_Top of XCVR_8B10B_interconnect is
     signal rx_Para_data_from_sync_buf_ch        : para_data_men;
     signal elastic_buf_overflow                 : std_logic;
     signal elastic_buf_sync_done                : std_logic;
+    signal elastic_can_start_sync               : ser_data_men;
     component v6_gtxwizard_v1_12 
     generic
     (
@@ -437,16 +438,16 @@ begin
             ------------------- Receive Ports - RX Data Path interface -----------------
             GTX0_RXDATA_OUT                 =>      from_xcvr_Rx_opensrc(0),
             GTX0_RXRECCLK_OUT               =>      XCVR_Rx_clk_out_ch(0),
-            GTX0_RXRESET_IN                 =>      XCVR_TxRx_rst(0),
+            GTX0_RXRESET_IN                 =>      XCVR_TxRx_rst,
             GTX0_RXUSRCLK2_IN               =>      rx_clk_buf_out(0),
             ------- Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR ------
             GTX0_RXEQMIX_IN                 =>      rx_eq_mix_0,
             GTX0_RXN_IN                     =>      RX_ser_N(0),
             GTX0_RXP_IN                     =>      RX_ser(0),
             ------------------------ Receive Ports - RX PLL Ports ----------------------
-            GTX0_GTXRXRESET_IN              =>      XCVR_TxRx_rst(0),
+            GTX0_GTXRXRESET_IN              =>      XCVR_TxRx_rst,
             GTX0_MGTREFCLKRX_IN             =>      XCVR_Ref_Clock,
-            GTX0_PLLRXRESET_IN              =>      XCVR_TxRx_rst(0),
+            GTX0_PLLRXRESET_IN              =>      XCVR_TxRx_rst,
             GTX0_RXPLLLKDET_OUT             =>      rx_freqlocked_ch(0),
             GTX0_RXRESETDONE_OUT            =>      XCVR_RX_ready_ch(0),
             ---------------- Transmit Ports - 8b10b Encoder Control Ports --------------
@@ -456,7 +457,7 @@ begin
             ------------------ Transmit Ports - TX Data Path interface -----------------
             GTX0_TXDATA_IN                  =>      to_xcvr_Tx_opensrc(0),
             GTX0_TXOUTCLK_OUT               =>      XCVR_Tx_clk_out_ch(0),
-            GTX0_TXRESET_IN                 =>      XCVR_TxRx_rst(0),
+            GTX0_TXRESET_IN                 =>      XCVR_TxRx_rst,
             GTX0_TXUSRCLK2_IN               =>      tx_clk_buf_out(0),
             ---------------- Transmit Ports - TX Driver and OOB signaling --------------
             GTX0_TXDIFFCTRL_IN              =>      tx_diff_ctrl_0,
@@ -466,7 +467,7 @@ begin
             --------------- Transmit Ports - TX Driver and OOB signalling --------------
             GTX0_TXPREEMPHASIS_IN           =>      tx_pre_emphasis_0,
             ----------------------- Transmit Ports - TX PLL Ports ----------------------
-            GTX0_GTXTXRESET_IN              =>      XCVR_TxRx_rst(0),
+            GTX0_GTXTXRESET_IN              =>      XCVR_TxRx_rst,
             GTX0_TXRESETDONE_OUT            =>      XCVR_TX_ready_ch(0),
 
 
@@ -489,16 +490,16 @@ begin
             ------------------- Receive Ports - RX Data Path interface -----------------
             GTX1_RXDATA_OUT                 =>      from_xcvr_Rx_opensrc(1),
             GTX1_RXRECCLK_OUT               =>      XCVR_Rx_clk_out_ch(1),
-            GTX1_RXRESET_IN                 =>      XCVR_TxRx_rst(1),
+            GTX1_RXRESET_IN                 =>      XCVR_TxRx_rst,
             GTX1_RXUSRCLK2_IN               =>      rx_clk_buf_out(1),
             ------- Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR ------
             GTX1_RXEQMIX_IN                 =>      rx_eq_mix_1,
             GTX1_RXN_IN                     =>      RX_ser_N(1),
             GTX1_RXP_IN                     =>      RX_ser(1),
             ------------------------ Receive Ports - RX PLL Ports ----------------------
-            GTX1_GTXRXRESET_IN              =>      XCVR_TxRx_rst(1),
+            GTX1_GTXRXRESET_IN              =>      XCVR_TxRx_rst,
             GTX1_MGTREFCLKRX_IN             =>      XCVR_Ref_Clock,
-            GTX1_PLLRXRESET_IN              =>      XCVR_TxRx_rst(1),
+            GTX1_PLLRXRESET_IN              =>      XCVR_TxRx_rst,
             GTX1_RXPLLLKDET_OUT             =>      rx_freqlocked_ch(1),
             GTX1_RXRESETDONE_OUT            =>      XCVR_RX_ready_ch(1),
             ---------------- Transmit Ports - 8b10b Encoder Control Ports --------------
@@ -508,7 +509,7 @@ begin
             ------------------ Transmit Ports - TX Data Path interface -----------------
             GTX1_TXDATA_IN                  =>      to_xcvr_Tx_opensrc(1),
             GTX1_TXOUTCLK_OUT               =>      XCVR_Tx_clk_out_ch(1),
-            GTX1_TXRESET_IN                 =>      XCVR_TxRx_rst(1),
+            GTX1_TXRESET_IN                 =>      XCVR_TxRx_rst,
             GTX1_TXUSRCLK2_IN               =>      tx_clk_buf_out(1),
             ---------------- Transmit Ports - TX Driver and OOB signaling --------------
             GTX1_TXDIFFCTRL_IN              =>      tx_diff_ctrl_1,
@@ -518,7 +519,7 @@ begin
             --------------- Transmit Ports - TX Driver and OOB signalling --------------
             GTX1_TXPREEMPHASIS_IN           =>      tx_pre_emphasis_1,
             ----------------------- Transmit Ports - TX PLL Ports ----------------------
-            GTX1_GTXTXRESET_IN              =>      XCVR_TxRx_rst(1),
+            GTX1_GTXTXRESET_IN              =>      XCVR_TxRx_rst,
             GTX1_TXRESETDONE_OUT            =>      XCVR_TX_ready_ch(1),
 
 
@@ -541,16 +542,16 @@ begin
             ------------------- Receive Ports - RX Data Path interface -----------------
             GTX2_RXDATA_OUT                 =>      from_xcvr_Rx_opensrc(2),
             GTX2_RXRECCLK_OUT               =>      XCVR_Rx_clk_out_ch(2),
-            GTX2_RXRESET_IN                 =>      XCVR_TxRx_rst(2),
+            GTX2_RXRESET_IN                 =>      XCVR_TxRx_rst,
             GTX2_RXUSRCLK2_IN               =>      rx_clk_buf_out(2),
             ------- Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR ------
             GTX2_RXEQMIX_IN                 =>      rx_eq_mix_2,
             GTX2_RXN_IN                     =>      RX_ser_N(2),
             GTX2_RXP_IN                     =>      RX_ser(2),
             ------------------------ Receive Ports - RX PLL Ports ----------------------
-            GTX2_GTXRXRESET_IN              =>      XCVR_TxRx_rst(2),
+            GTX2_GTXRXRESET_IN              =>      XCVR_TxRx_rst,
             GTX2_MGTREFCLKRX_IN             =>      XCVR_Ref_Clock,
-            GTX2_PLLRXRESET_IN              =>      XCVR_TxRx_rst(2),
+            GTX2_PLLRXRESET_IN              =>      XCVR_TxRx_rst,
             GTX2_RXPLLLKDET_OUT             =>      rx_freqlocked_ch(2),
             GTX2_RXRESETDONE_OUT            =>      XCVR_RX_ready_ch(2),
             ---------------- Transmit Ports - 8b10b Encoder Control Ports --------------
@@ -560,7 +561,7 @@ begin
             ------------------ Transmit Ports - TX Data Path interface -----------------
             GTX2_TXDATA_IN                  =>      to_xcvr_Tx_opensrc(2),
             GTX2_TXOUTCLK_OUT               =>      XCVR_Tx_clk_out_ch(2),
-            GTX2_TXRESET_IN                 =>      XCVR_TxRx_rst(2),
+            GTX2_TXRESET_IN                 =>      XCVR_TxRx_rst,
             GTX2_TXUSRCLK2_IN               =>      tx_clk_buf_out(2),
             ---------------- Transmit Ports - TX Driver and OOB signaling --------------
             GTX2_TXDIFFCTRL_IN              =>      tx_diff_ctrl_2,
@@ -570,7 +571,7 @@ begin
             --------------- Transmit Ports - TX Driver and OOB signalling --------------
             GTX2_TXPREEMPHASIS_IN           =>      tx_pre_emphasis_2,
             ----------------------- Transmit Ports - TX PLL Ports ----------------------
-            GTX2_GTXTXRESET_IN              =>      XCVR_TxRx_rst(2),
+            GTX2_GTXTXRESET_IN              =>      XCVR_TxRx_rst,
             GTX2_TXRESETDONE_OUT            =>      XCVR_TX_ready_ch(2),
 
 
@@ -593,16 +594,16 @@ begin
             ------------------- Receive Ports - RX Data Path interface -----------------
             GTX3_RXDATA_OUT                 =>      from_xcvr_Rx_opensrc(3),
             GTX3_RXRECCLK_OUT               =>      XCVR_Rx_clk_out_ch(3),
-            GTX3_RXRESET_IN                 =>      XCVR_TxRx_rst(3),
+            GTX3_RXRESET_IN                 =>      XCVR_TxRx_rst,
             GTX3_RXUSRCLK2_IN               =>      rx_clk_buf_out(3),
             ------- Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR ------
             GTX3_RXEQMIX_IN                 =>      rx_eq_mix_3,
             GTX3_RXN_IN                     =>      RX_ser_N(3),
             GTX3_RXP_IN                     =>      RX_ser(3),
             ------------------------ Receive Ports - RX PLL Ports ----------------------
-            GTX3_GTXRXRESET_IN              =>      XCVR_TxRx_rst(3),
+            GTX3_GTXRXRESET_IN              =>      XCVR_TxRx_rst,
             GTX3_MGTREFCLKRX_IN             =>      XCVR_Ref_Clock,
-            GTX3_PLLRXRESET_IN              =>      XCVR_TxRx_rst(3),
+            GTX3_PLLRXRESET_IN              =>      XCVR_TxRx_rst,
             GTX3_RXPLLLKDET_OUT             =>      rx_freqlocked_ch(3),
             GTX3_RXRESETDONE_OUT            =>      XCVR_RX_ready_ch(3),
             ---------------- Transmit Ports - 8b10b Encoder Control Ports --------------
@@ -612,7 +613,7 @@ begin
             ------------------ Transmit Ports - TX Data Path interface -----------------
             GTX3_TXDATA_IN                  =>      to_xcvr_Tx_opensrc(3),
             GTX3_TXOUTCLK_OUT               =>      XCVR_Tx_clk_out_ch(3),
-            GTX3_TXRESET_IN                 =>      XCVR_TxRx_rst(3),
+            GTX3_TXRESET_IN                 =>      XCVR_TxRx_rst,
             GTX3_TXUSRCLK2_IN               =>      tx_clk_buf_out(3),
             ---------------- Transmit Ports - TX Driver and OOB signaling --------------
             GTX3_TXDIFFCTRL_IN              =>      tx_diff_ctrl_3,
@@ -622,7 +623,7 @@ begin
             --------------- Transmit Ports - TX Driver and OOB signalling --------------
             GTX3_TXPREEMPHASIS_IN           =>      tx_pre_emphasis_3,
             ----------------------- Transmit Ports - TX PLL Ports ----------------------
-            GTX3_GTXTXRESET_IN              =>      XCVR_TxRx_rst(3),
+            GTX3_GTXTXRESET_IN              =>      XCVR_TxRx_rst,
             GTX3_TXRESETDONE_OUT            =>      XCVR_TX_ready_ch(3)
 
 
@@ -673,7 +674,7 @@ begin
 
 
                 rx_elastic_buf_sync_done => elastic_buf_sync_done,
-                gp_sync_can_start        => open,
+                gp_sync_can_start        => elastic_can_start_sync(i),
 
                 Tx_K                     => tx_data_k_ch(i),
                 Rx_K                     => rx_data_k_ch(i),
@@ -696,7 +697,7 @@ begin
         ch_sync_buffer_sync_done        => elastic_buf_sync_done,
         ch_sync_buffer_overflow         => elastic_buf_overflow,
 
-        sync_en                         => lane_up,
+        sync_en                         => elastic_can_start_sync(0) and elastic_can_start_sync(1) and elastic_can_start_sync(2) and elastic_can_start_sync(3),
 
         ch_sync_buffer_directly_pass    => not(grouping_enable),
         

@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Fri Apr 12 18:52:16 2019
+Mon Apr 22 01:06:52 2019
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -430,7 +430,7 @@ Pinout by Pin Number:
 |AJ16      |                               |IOBM     |IO_L3P_33                 |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
 |AJ17      |                               |         |VCCO_33                   |         |           |33            |          |         |           |         |any******|          |           |                |
 |AJ18      |error_cnt_ch_bank<0><0><7>     |IOB      |IO_L6P_31                 |OUTPUT   |LVCMOS25*  |31            |12        |SLOW     |           |         |         |UNLOCATED |YES        |NONE            |
-|AJ19      |error_cnt_ch_bank<0><3><8>     |IOB      |IO_L9N_MRCC_31            |OUTPUT   |LVCMOS25*  |31            |12        |SLOW     |           |         |         |UNLOCATED |YES        |NONE            |
+|AJ19      |error_cnt_ch_bank<0><3><7>     |IOB      |IO_L9N_MRCC_31            |OUTPUT   |LVCMOS25*  |31            |12        |SLOW     |           |         |         |UNLOCATED |YES        |NONE            |
 |AJ20      |error_cnt_ch_bank<0><3><6>     |IOB      |IO_L9P_MRCC_31            |OUTPUT   |LVCMOS25*  |31            |12        |SLOW     |           |         |         |UNLOCATED |YES        |NONE            |
 |AJ21      |error_cnt_ch_bank<0><0><11>    |IOB      |IO_L3P_31                 |OUTPUT   |LVCMOS25*  |31            |12        |SLOW     |           |         |         |UNLOCATED |YES        |NONE            |
 |AJ22      |                               |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
@@ -732,9 +732,9 @@ Pinout by Pin Number:
 |AT10      |                               |IOBS     |IO_L19N_VRP_34            |UNUSED   |           |34            |          |         |           |         |         |          |           |                |
 |AT11      |                               |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |AT12      |                               |IOBM     |IO_L19P_33                |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
-|AT13      |error_cnt_ch_bank<0><3><4>     |IOB      |IO_L10N_MRCC_31           |OUTPUT   |LVCMOS25*  |31            |12        |SLOW     |           |         |         |UNLOCATED |YES        |NONE            |
-|AT14      |error_cnt_ch_bank<0><3><7>     |IOB      |IO_L10P_MRCC_31           |OUTPUT   |LVCMOS25*  |31            |12        |SLOW     |           |         |         |UNLOCATED |YES        |NONE            |
-|AT15      |error_cnt_ch_bank<0><3><5>     |IOB      |IO_L8N_SRCC_31            |OUTPUT   |LVCMOS25*  |31            |12        |SLOW     |           |         |         |UNLOCATED |YES        |NONE            |
+|AT13      |error_cnt_ch_bank<0><3><9>     |IOB      |IO_L10N_MRCC_31           |OUTPUT   |LVCMOS25*  |31            |12        |SLOW     |           |         |         |UNLOCATED |YES        |NONE            |
+|AT14      |error_cnt_ch_bank<0><3><8>     |IOB      |IO_L10P_MRCC_31           |OUTPUT   |LVCMOS25*  |31            |12        |SLOW     |           |         |         |UNLOCATED |YES        |NONE            |
+|AT15      |error_cnt_ch_bank<0><3><0>     |IOB      |IO_L8N_SRCC_31            |OUTPUT   |LVCMOS25*  |31            |12        |SLOW     |           |         |         |UNLOCATED |YES        |NONE            |
 |AT16      |                               |         |VCCO_31                   |         |           |31            |          |         |           |         |2.50     |          |           |                |
 |AT17      |rx_Para_data_bank<0><0><15>    |IOB      |IO_L9P_MRCC_30            |OUTPUT   |LVCMOS25*  |30            |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
 |AT18      |ext_tx_para_data_clk_bank<0><2>|IOB      |IO_L0N_30                 |OUTPUT   |LVCMOS25*  |30            |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
@@ -778,7 +778,7 @@ Pinout by Pin Number:
 |AU12      |                               |IOBS     |IO_L19N_33                |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
 |AU13      |                               |         |VCCO_31                   |         |           |31            |          |         |           |         |2.50     |          |           |                |
 |AU14      |error_cnt_ch_bank<0><3><11>    |IOB      |IO_L14P_31                |OUTPUT   |LVCMOS25*  |31            |12        |SLOW     |           |         |         |UNLOCATED |YES        |NONE            |
-|AU15      |error_cnt_ch_bank<0><3><0>     |IOB      |IO_L11P_SRCC_31           |OUTPUT   |LVCMOS25*  |31            |12        |SLOW     |           |         |         |UNLOCATED |YES        |NONE            |
+|AU15      |error_cnt_ch_bank<0><3><5>     |IOB      |IO_L11P_SRCC_31           |OUTPUT   |LVCMOS25*  |31            |12        |SLOW     |           |         |         |UNLOCATED |YES        |NONE            |
 |AU16      |                               |IOBS     |IO_L9N_MRCC_30            |UNUSED   |           |30            |          |         |           |         |         |          |           |                |
 |AU17      |rx_Para_data_bank<0><0><1>     |IOB      |IO_L2P_30                 |OUTPUT   |LVCMOS25*  |30            |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
 |AU18      |                               |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
@@ -866,7 +866,7 @@ Pinout by Pin Number:
 |AW12      |                               |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |AW13      |error_cnt_ch_bank<0><3><15>    |IOB      |IO_L16P_31                |OUTPUT   |LVCMOS25*  |31            |12        |SLOW     |           |         |         |UNLOCATED |YES        |NONE            |
 |AW14      |error_cnt_ch_bank<0><3><10>    |IOB      |IO_L13N_31                |OUTPUT   |LVCMOS25*  |31            |12        |SLOW     |           |         |         |UNLOCATED |YES        |NONE            |
-|AW15      |error_cnt_ch_bank<0><3><9>     |IOB      |IO_L13P_31                |OUTPUT   |LVCMOS25*  |31            |12        |SLOW     |           |         |         |UNLOCATED |YES        |NONE            |
+|AW15      |error_cnt_ch_bank<0><3><4>     |IOB      |IO_L13P_31                |OUTPUT   |LVCMOS25*  |31            |12        |SLOW     |           |         |         |UNLOCATED |YES        |NONE            |
 |AW16      |                               |IOBS     |IO_L12N_VRP_30            |UNUSED   |           |30            |          |         |           |         |         |          |           |                |
 |AW17      |                               |         |VCCO_30                   |         |           |30            |          |         |           |         |2.50     |          |           |                |
 |AW18      |rx_Para_data_bank<0><0><8>     |IOB      |IO_L5N_30                 |OUTPUT   |LVCMOS25*  |30            |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
