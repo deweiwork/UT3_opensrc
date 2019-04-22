@@ -72,7 +72,10 @@ begin
         if (Reset_n = '0' and sync_en = '0') then
             cnt_ch          <= (others => 0);
             sync_status     <= sync_start;
-            out_mux_sel_ch  <= (others => ch_sync_buffer_Length_power - 1);    
+            out_mux_sel_ch  <= (others => ch_sync_buffer_Length_power - 1);
+
+            ch_sync_buffer_sync_done_r  <= '0';
+            ch_sync_buffer_overflow_r   <= '0';
             ch_sync_buffer_sync_done    <= '0';
             ch_sync_buffer_overflow     <= '0';
 
